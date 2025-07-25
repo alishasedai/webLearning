@@ -21,6 +21,25 @@
     border: 1px solid black;
     /* width: 1275px; */
     width: 80vw;
+    height: 10vh;
     box-sizing: border-box;
     text-align: center;
+ }
+ .container{
+     margin: 23px auto;
+    padding: 20px;
+    background-color: red;
+    border: 1px solid black;
+    height: 80vh;
+    /* width: 1275px; */
+    width: 80vw;
+    box-sizing: border-box;
+    text-align: center;
+ }
+ .shadow{
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    box-shadow: 10px 8px 5px 1px  #888888 inset; 
+
  }
