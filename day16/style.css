@@ -48,3 +48,14 @@
     text-shadow: 1px 2px 4px black;
     
  }
+ /* overflow use garnu lagya jasma scroll  */
+ .overflows{
+    width: 30vw;
+    height: 20vh;
+    border: 1px solid black;
+    overflow: scroll;
+    white-space: nowrap;
+    /* text-overflow: ellipsis; */
+    overflow-y: hidden;
+
+ }
