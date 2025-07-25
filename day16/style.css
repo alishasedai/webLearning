@@ -7,7 +7,20 @@
 
 } */
 
-.h1s{
+/* .h1s{
     background-color: red;
     border: 1px solid black;
-}
+} */
+ *{
+    
+ }
+ .box1{
+    margin: auto;
+    padding: 20px;
+    background-color: red;
+    border: 1px solid black;
+    /* width: 1275px; */
+    width: 80vw;
+    box-sizing: border-box;
+    text-align: center;
+ }
