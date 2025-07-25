@@ -43,3 +43,8 @@
     box-shadow: 10px 8px 5px 1px  #888888 inset; 
 
  }
+ .textshadow{
+    color: red;
+    text-shadow: 1px 2px 4px black;
+    
+ }
