@@ -1,0 +1,13 @@
+
+/* .h1s{
+    background-color: red;
+}
+[data-x = a]{
+    background-color: yellow;
+
+} */
+
+.h1s{
+    background-color: red;
+    border: 1px solid black;
+}
