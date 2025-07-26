@@ -1,0 +1,74 @@
+
+
+section{
+    display: flex;
+    justify-content: center;
+  
+}
+.cardBox{
+    width: 300px;
+    height: 480px;
+    background-color: white;
+    border: 1px solid #bbb2b2;
+    border-radius: 10px;   
+  padding-top: 10px;  
+  justify-content: center;
+  margin-left: 50px;
+  margin-top: 20px;
+
+}
+.widthHeight{
+    width: 400px;
+    height: 540px;
+    background-color: #eaeaea;
+    justify-content: center;
+}
+
+
+.image img{
+    width: 280px;
+    height: 200px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+.content{
+    padding-left: 15px;
+}
+.option{
+    display: flex;
+    gap: 10px;
+    margin: 0px 20px;
+     flex-direction: row;  
+    align-items: center; 
+    color: #584d4d;
+    
+}
+.Nature{
+    border: 1px solid rgb(216, 209, 209);
+    padding: 3px 10px;
+    border-radius: 20px;
+   
+}
+.Lake{
+    border: 1px solid rgb(216, 209, 209);
+    padding: 3px 10px;
+    border-radius: 20px;
+
+}
+.para{
+    color: #6b6565;
+}
+.readMore{
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 50px;
+    color: #3b75eb;
+    background-color: #B1BDCA;
+    font-weight: 600;
+
+}
