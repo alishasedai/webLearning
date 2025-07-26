@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divs img{
+            float: left;
+        }
+        .divs{
+            border: 1px solid black;
+            display: flow-root;
+        }
+        .divs .div{
+            border: 1px solid red;
+        }
+        .div:nth-child(2){
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="divs">
+        
+         <img src="/image/c.jpg" alt="image not found" width="100">
+         <div>Container</div>
+           <div class="co1 div">container Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates perspiciatis quod, tenetur sapiente quidem tempore, labore, voluptate expedita deleniti sit iusto quia placeat nam. Quisquam id repellat odit saepe asperiores dolorem fugiat sunt. Nulla consequatur voluptates ipsum harum rerum temporibus quasi nesciunt officiis, corporis eos distinctio laborum suscipit! Asperiores, sed!</div>
+         <div class="co2 div">Container 2</div>
+      
+    </div>
+</body>
+</html>
