@@ -1,0 +1,37 @@
+.container{
+    height: 80vh;
+    display: grid;
+    grid-template-areas: "nav nav nav "
+                         "sidebar article article "
+                         "footer footer footer"
+                         ;
+
+
+}
+
+.item{
+    /* width: 200px; */
+    height: 200px;
+    background-color: red;
+    border: 3px solid red;
+}
+.item-1{
+    background-color: yellow;
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+}
+.item-2{
+    
+    background-color: pink;
+    grid-area: sidebar;
+}
+.item-3{
+    background-color: palevioletred;
+    grid-area: article;
+}
+.item-4{
+    
+    background-color: green;
+    grid-area: footer;
+}
