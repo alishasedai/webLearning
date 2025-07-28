@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+   <style>
+     .container{
+        background-color: palevioletred;
+        width: 50vw;
+        height: 80vh;
+        padding: 1px;
+
+    }
+    .item{
+         background-color:blueviolet;
+        width: 15vw;
+        height: 20vh;
+        animation-name: alishaKoAnimation;
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        margin: 50px;
+        border-radius: 50%;
+
+    }
+
+    @keyframes alishaKoAnimation {
+        from{
+
+        }
+        to{
+            background-color: red;
+            transform: rotate(300deg);
+            border-radius: 50%;
+
+        }
+
+    }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+    
+</body>
+</html>
