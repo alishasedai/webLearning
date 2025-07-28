@@ -17,3 +17,97 @@ nav{
     width: 200px; height:30px;
     margin-top: 20px;
 }
+.mainCard{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    margin: 20px 100px;
+    padding-top: 50px;
+}
+.cards{
+    border-radius: 10px;
+    height: 150px;
+    width: 300px;
+    margin: 10px;
+    background-color: #efe7e7;
+    text-align: center;
+}
+.cards .btn{
+    margin-top: 30px;
+}
+.cards .btn .btn-1{
+    padding: 10px 15px;
+    background-color: #07B5CC;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.cards .btn .btn-2{
+    padding: 10px 15px;
+    background-color: #5FB75F;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 622px) {
+    .cards{
+    border-radius: 10px;
+    height: 120px;
+    width: 120px;
+    margin: 10px;
+    background-color: rgb(252, 204, 204);
+    text-align: center;
+}
+  .mainCard {
+    grid-template-columns: 1fr;
+    margin: 10px 20px;
+    padding-top: 30px;
+  }
+
+  .cards {
+    width: 100%;
+  }
+  nav{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: red; */
+    align-items: center;
+}
+.navBar{
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    font-size: 12px;
+    
+}
+
+.logo img{
+    width: 100px; height:30px;
+    margin-top: 20px;
+}
+.cards .btn .btn-1{
+    padding: 8px 10px;
+    background-color: #07B5CC;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.cards .btn .btn-2{
+    padding: 8px 10px;
+    background-color: #5FB75F;
+    color: white;
+    border: none;
+    font-weight: 400;
+    border-radius: 10px;
+}
+h3{
+    font-size: 16px;
+}
+  
+}

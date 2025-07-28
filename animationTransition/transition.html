@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: red;
+            width: 50vw;
+            height: 80vh;
+            padding: 1px;
+        }
+         .item{
+            background-color: yellow;
+            width: 15vw;
+            height: 20vh;
+            margin: 20px;
+            transition-property: all ;
+            transition-duration: 2s;
+            transition-delay: 1s;
+            transition-timing-function: ease-in-out;
+            text-align: center;
+            
+        }
+        .translate:hover{
+            transform: translateX(20vh) translateY(10vw);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item translate">I am alisha Sedai</div>
+    </div>
+</body>
+</html>
