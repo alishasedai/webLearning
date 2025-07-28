@@ -11,6 +11,7 @@
             /* background-color: blue; */
             position: relative;
             border-bottom: 10px solid black;
+            
         }
         .bounce{
             width: 121px;
@@ -24,6 +25,12 @@
            animateY 1s ease-out infinite alternate
             ;
 
+        }
+        img{
+            width: 121px;
+            height: 121px;
+            object-fit: cover;
+            border-radius: 70px;
         }
         @keyframes animateX {
             from{
@@ -45,7 +52,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="bounce"></div>
+        <div class="bounce">
+            <img src="/image/c.jpg" >
+        </div>
     </div>
 </body>
 </html>

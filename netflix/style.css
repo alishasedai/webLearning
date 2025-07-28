@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-color: black; */
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60vw;
+    margin: auto;
+}
+.main{
+    background-image: url("assetss/bg.jpg");
+    height: 80vh;
+    position: relative;
+    background-position: center center;
+    background-size: max(1000px, 100vw);
+    background-repeat: no-repeat;
+
+}
+.main .box{
+    width: 100%;
+    height: 80vh;
+    opacity: 0.5;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+nav img{
+    width: 112px;
+    position: relative;
+    z-index: 10;
+}
+nav button{
+    position: relative;
+    z-index: 10;
+}
+.hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    color: white;
+    font-family: 'Martel Sans';
+    gap: 18px;
+    font-weight: 600;
+    padding: 20px;
+    margin-top:30px;
+    filter: contrast(100%);
+}
+.hero> :first-child{
+    font-weight: 900;
+    font-size: 41px;
+    /* color: blue; */
+}
+.hero> :nth-child(2){
+    font-weight: 400;
+    font-size: 25px;
+}
+.hero> :nth-child(3){
+    font-weight: 400;
+    font-size: 20px;
+}
+.separation{
+    height: 7px;
+    background-color: gray;
+    margin-top: -90px;
+}
+.btn{
+    padding: 3px 8px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+
+}
+.btn-red{
+    background-color: red;
+    color: white;
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 7px;
+    filter: contrast(100%);
+}
+.btn-red-sm{
+    background-color: red;
+    color: white;
+    filter: contrast(100%);
+
+}
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.main input{
+     padding: 10px 20px 10px 0px;
+    font-size: 16px;
+    border-radius: 7px;
+    background-color: rgba(23, 23, 23, 0.7);
+    color: white;
+    filter: contrast(100%);
+    border: 1px solid white;
+}
