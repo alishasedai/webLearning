@@ -7,3 +7,7 @@ var a = "I am Alisha Sedai";
 for(var i = 1 ; i<=100 ; i++){
     console.log(a);
 }
+
+let names  = "harry";
+
+console.log(names.length);
