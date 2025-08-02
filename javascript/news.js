@@ -18,3 +18,5 @@ console.log(names.slice(2,4));
 console.log(names.replace("harry", "Alisha"));
 console.log(names.concat(names1));
 console.log(names1.trim());
+
+
