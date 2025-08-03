@@ -1,5 +1,10 @@
-<!DOCTYPE html>
+
 <html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS arrays</title>
+</head>
 <body>
 <h1>JavaScript Arrays</h1>
 <h2>The shift() Method</h2>
@@ -7,11 +12,32 @@
 
 <p id="demo1"></p>
 <p id="demo2"></p>
+<p id="demo3"></p>
 
 <script>
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo1").innerHTML = fruits.shift();
+const fruits = [ "Guava" , "Orange", "Apple", "Mango"];
+let d = [7,8,9,10];
+
+delete d[1];
+
+console.log(d.toString());
+// document.getElementById("demo1").innerHTML = fruits.shift();
+console.log(fruits.shift());
+console.log(fruits.unshift("Strawberry"));
+console.log(fruits.toString());
+document.getElementById("demo1").innerHTML = fruits.unshift("Strawberry");
+
+let n = [1, 2,4];
+n.pop();
+console.log(n.toString());
+document.getElementById("demo3").innerHTML = n;
 document.getElementById("demo2").innerHTML = fruits;
+
+
+// join methods
+let a = [7, 8, 9, 10];
+a.join("  ");
+console.log(a);
 </script>
 
 </body>
