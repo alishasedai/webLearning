@@ -8,27 +8,28 @@
 <body>
     <h1>Getting the factorial</h1>
     <script>
-        // using for loops methods
+        // using for loops methods finding factorial
          let fact = 1;
         let facto = 6;
-        for(let a = 1 ; a<= facto ; a++){
+        function facFor(number){
+            for(let a = 1 ; a<= facto ; a++){
              fact = a *fact;
-        }
-        console.log(fact);
+        }console.log(fact);
+        };
+        facFor(facto)
+        // using reduce methods finding factorial
 
-        // using reduce methods
-fact0 = 5;
      function factorial(number){
         let arr = Array.from(Array(number+1).keys())
         
-        console.log(arr.slice(1,));
+        // console.log(arr.slice(1,));
        let c = arr.slice(1,).reduce((a,b)=>{
             return a*b;
         }) 
          console.log(c);
      }
     
-     factorial(fact0);
+     factorial(facto);
     </script>
 </body>
 </html>
