@@ -20,3 +20,7 @@ console.log(document.querySelector(".container").tagName);
 console.log(document.querySelector(".container").hasAttribute("style"));
 console.log(document.querySelector(".container").textContent);
 console.log(document.querySelector(".container").hidden = true);
+document.querySelector(".box").innerHTML = "Hey I am Alisha Sedai";
+
+document.querySelector(".box").setAttribute("style", "display : inline ,gap : 45px");
+console.log(document.querySelector(".box").getAttribute("style"));
