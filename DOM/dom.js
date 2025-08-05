@@ -14,3 +14,9 @@ Array.from(boxes).forEach(e=>{
    e.style.backgroundColor = getRandomColor();
    e.style.color = getRandomColor();
 })
+console.log(document.querySelector(".container").innerText);
+console.log(document.querySelector(".container").outerHTML);
+console.log(document.querySelector(".container").tagName);
+console.log(document.querySelector(".container").hasAttribute("style"));
+console.log(document.querySelector(".container").textContent);
+console.log(document.querySelector(".container").hidden = true);
