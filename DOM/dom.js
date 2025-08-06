@@ -25,4 +25,5 @@ document.querySelector(".box").innerHTML = "Hey I am Alisha Sedai";
 document.querySelector(".box").setAttribute("style", "display : inline ,gap : 45px");
 console.log(document.querySelector(".box").getAttribute("style"));
 
-console.log(document.querySelector(".box").attributes)
+console.log(document.querySelector(".box").attributes);
+document.querySelector(".box").removeAttribute("style")
