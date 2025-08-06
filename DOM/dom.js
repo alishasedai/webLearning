@@ -37,5 +37,7 @@ div.innerHTML = "I have been inserted <b> by ALisha</b>";
 div.setAttribute("class", "created");
 // document.querySelector(".container").append(div);
 
-document.querySelector(".container").prepend(div);
+// document.querySelector(".container").prepend(div);
+
+document.querySelector(".container").before(div);
 
