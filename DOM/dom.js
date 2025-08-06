@@ -32,3 +32,7 @@ console.log(document.querySelector(".box").dataset);
 // you can also use the design mode on
 
 console.log(`Design mode => ${document.designMode = "on"}`);
+let div = document.createElement("div");
+div.innerHTML = "I have been inserted <b> by ALisha</b>";
+div.setAttribute("class", "created");
+document.querySelector(".container").append(div);
