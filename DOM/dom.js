@@ -28,3 +28,7 @@ console.log(document.querySelector(".box").getAttribute("style"));
 console.log(document.querySelector(".box").attributes);
 document.querySelector(".box").removeAttribute("style");
 console.log(document.querySelector(".box").dataset);
+
+// you can also use the design mode on
+
+console.log(`Design mode => ${document.designMode = "on"}`);
