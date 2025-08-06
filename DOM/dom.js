@@ -39,5 +39,6 @@ div.setAttribute("class", "created");
 
 // document.querySelector(".container").prepend(div);
 
-document.querySelector(".container").before(div);
+// document.querySelector(".container").before(div);
 
+document.querySelector(".container").after(div);
