@@ -26,4 +26,5 @@ document.querySelector(".box").setAttribute("style", "display : inline ,gap : 45
 console.log(document.querySelector(".box").getAttribute("style"));
 
 console.log(document.querySelector(".box").attributes);
-document.querySelector(".box").removeAttribute("style")
+document.querySelector(".box").removeAttribute("style");
+console.log(document.querySelector(".box").dataset);
