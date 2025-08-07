@@ -44,3 +44,5 @@ div.setAttribute("class", "created");
 document.querySelector(".container").after(div);
 
 document.querySelector(".container").classList.add("Alisha");
+document.querySelector(".container").classList.add("puku");
+document.querySelector(".container").classList.remove("puku");
