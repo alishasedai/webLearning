@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsertAdjacentHTML</title>
+</head>
+<body>
+    <div id="div">i am inside the div</div>
+    <script>
+        const dos = document.getElementById("div");
+        dos.insertAdjacentHTML('beforebegin', '<p> Hello beforebegin</p>');
+        dos.insertAdjacentHTML('afterend', '<p> BYEEEE afterend </p>');
+         dos.insertAdjacentHTML('afterbegin', '<p> Hello afterbegin </p>');
+        dos.insertAdjacentHTML('beforeend', '<p> ALisha BYEEEE beforeend</p>');
+    </script>
+</body>
+</html>
