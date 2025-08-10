@@ -10,7 +10,15 @@
         let str = "Javascript is fun and powerful";
         let pattern1 = /fun/;
         console.log(pattern1.test(str));
-        
+        let pattern2 = /powerful/;
+        console.log(pattern2.exec(str));
+        console.log(str.match(/a/g));
+        console.log(str.match(/a/i));
+        console.log(str.match(/a/m));
+        console.log(str.replace(/fun/, "amazing"));
+        console.log(str.search(/fun/));
+        console.log(str.split(/\s+/));
+
     </script>
 </body>
 </html>
