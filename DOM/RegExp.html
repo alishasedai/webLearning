@@ -19,6 +19,35 @@
         console.log(str.search(/fun/));
         console.log(str.split(/\sreg/));
         	console.log("abc abclisha abc abcs".match(/abc/g));
+
+            let email = "test@example.com";
+            let emailRegx = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+            console.log(emailRegx.test(email))
+                         /* 
+                            let email = "test@example.com";
+                let emailRegx = /^[\w.-]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+
+                console.log(emailRegx.test(email));  // true or false
+                Explanation of the regex:
+                ^ — start of string
+
+                [\w.-]+ — username part:
+
+                \w = any word character (a-z, A-Z, 0-9, and underscore)
+
+                . and - are added inside character set, so username can have letters, digits, dots, and dashes
+
+                + means one or more of those characters
+
+                @ — the @ symbol
+
+                [a-zA-Z]+ — domain name: only letters (uppercase or lowercase), one or more times
+
+                \. — literal dot .
+
+                [a-zA-Z]{2,} — domain extension: only letters, at least 2 characters (e.g., .com, .org, .edu)
+
+                $ — end of string*/
     </script>
 </body>
 </html>
