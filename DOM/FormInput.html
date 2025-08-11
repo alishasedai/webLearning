@@ -41,7 +41,13 @@
 
             let gender = "Not selected";
             let radio = form.gender;
-            
+
+            for(let i = 0; i<radio.length ;i++){
+                if(radio[i].checked){
+                    gender = radios[i].value;
+                }
+            }
+            alert(Name + address + hidden + country + agree + gender)
 
         }
     </script>
