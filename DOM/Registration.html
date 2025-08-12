@@ -27,14 +27,140 @@
             const phone = document.forms["regForm"]["phone"].value;
             const email = document.forms["regForm"]["email"].value;
             const dob = document.forms["regForm"]["dob"].value;
-            const gender = document.forms["regForm"]["gender"].value;
-            const terms = document.forms["regForm"]["terms"].value;
+            const country = document.forms["regForm"]["country"].value;
+            const gender = document.querySelector('input[name="gender"]:checked');
+            const terms = document.forms["regForm"]["terms"].checked;
 
             // clear Previos errors
 
-            document.
+            document.querySelectorAll(".error").forEach(e => {
+                e.innerHTML  = "";
+            });
 
+            // Name Validation 
+
+            if(name.length !== 5){
+                document.getElementById("nameErr").innerHTML =
+                "Name must be atleast 5 character";
+                 valid =false;
+
+            }
+
+            // password and confirm password
+
+            if(password.trim() === ""){
+                document.getElementById("passwordErr").innerHTML =
+                "Password is required";
+                valid = false;
+
+            }
+            if(confirmPassword === ""){
+                document.getElementById("confirmPasswordErr").innerHTML 
+                = "Confirm your password";
+                valid = false;
+            }
+
+            if(password !== confirmPassword){
+                document.getElementById("confirmPasswordErr").innerHTML
+                =" Password do not match";
+                valid = false;
+            }
+
+            //phone validation
+            let phoneptrn = /^[0-9]{10}$/;
+            if(!phoneptrn.test(phone)){
+                document.getElementById("phoneErr").innerHTML
+                = "Phone must be 10 digit number ";
+                valid = false;
+            }
+
+            // email validation
+
+            let emailPtrn = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+
+            if(!emailPtrn.test(email)){
+                document.getElementById("emailErr").innerHTML
+                = "Invalid email format"
+                valid = false;
+
+            }
+
+            //dob Validation
+
+            let dobptrn = /^\d{4}-\d{2}-\d{2}$/;
+            if(!dobptrn.test(dob)){
+                document.getElementById("dobErr").innerHTML = 
+                "DOB must be in YYYY-MM-DD format";
+                valid = false;
+            }
+
+            //country validation
+            if(country.trim() === ""){
+                document.getElementById("countryErr").innerHTML
+                = "Please select country";
+                valid = false;
+            }
+
+            // gender validation
+
+            if(!gender){
+                document.getElementById("genderErr").innerHTML
+                = "Please select gender ";
+                valid =false;
+            }
+            // terms and condition
+            if(!terms){
+                document.getElementById("termsErr").innerHTML
+                = "You must accept terms and conditions";
+                valid = false;
+            }
+            return valid;
         }
     </script>
+    <h2>Registeration Form</h2>
+    <form name="regForm" onsubmit="return validateForm()">
+        <label for="name">Name : </label>
+        <input type="text" name="name" id="name">
+        <span id="nameErr" class="error"></span><br><br>
+
+        <label for="password">Password : </label>
+        <input type="password" name="password" id="password">
+        <span id="passwordErr" class="error"></span><br><br>
+
+        <label for="confirmPassword">confirmPassword : </label>
+        <input type="password" name="confirmPassword" id="confirmPassword">
+        <span id="confirmPasswordErr" class="error"></span><br><br>
+        
+        <label for="phone">Phone : </label>
+        <input type="text" name="phone" id="phone">
+        <span id="phoneErr" class="error"></span><br><br>
+
+        <label for="email">Email : </label>
+        <input type="email" name="email" id="email">
+        <span id="emailErr" class="error"></span><br><br>
+
+        <label for="dob">DOB : </label>
+        <input type="text" name="dob" id="dob" placeholder="YYYY-MM-DD">
+        <span id="dobErr" class="error"></span><br><br>
+
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="">Select</option>
+            <option value="Nepal">Nepal</option>
+            <option value="India">India</option>
+        </select>
+        <span id="countryErr" class="error"></span><br><br>
+
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="male" id="male">Male
+        <input type="radio" name="gender" value="female" id="female">Female
+        <span id="genderErr" class="error"></span><br><br>
+
+        <label for="terms"></label>
+        <input type="checkbox" name="terms" id="terms">I accept terms and condition
+        <span id="termsErr" class="error"></span><br><br>
+
+        <input type="submit" value="Register">
+    </form>
 </body>
 </html>
