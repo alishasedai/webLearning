@@ -32,10 +32,10 @@
         function displayValues(){
             let form =  document.forms["demoForm"];
 
-            let name = forms.textField.value;
-            let address = forms.adressField.value;
-            let hidden = forms.hiddenField.value;
-            let country = forms.selectBox.value;
+            let name = form.textField.value;
+            let address = form.addressField.value;
+            let hidden = form.hiddenField.value;
+            let country = form.selectBox.value;
 
             let agree = form.agree.checked? form.agree.value : "Not agree";
 
@@ -44,10 +44,11 @@
 
             for(let i = 0; i<radio.length ;i++){
                 if(radio[i].checked){
-                    gender = radios[i].value;
+                    gender = radio[i].value;
                 }
             }
-            alert(Name + address + hidden + country + agree + gender)
+            // alert(name + address + hidden + country + agree + gender)
+            alert(`Name : ${name}  Address : ${address}  hidden: ${ hidden } Country : ${country} Agree :${agree}  Gender : ${gender} `)
 
         }
     </script>
