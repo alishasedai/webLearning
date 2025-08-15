@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple React Example</title>
+  <!-- React and ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel for JSX support -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Your React code -->
+  <script type="text/babel">
+    // Simple React component
+    function Hello() {
+      return <h1>Hello, I am learning React!</h1>;
+    }
+
+    // Render the component to the page
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Hello />);
+  </script>
+</body>
+</html>
