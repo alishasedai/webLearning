@@ -17,7 +17,15 @@ console.log(para.textContent);
 
 let o = document.createElement("div");
 o.innerText="This is inside the div";
-document.body.appendChild(o);
-
+// document.body.appendChild(o);
+document.body.append(o);
+let mode = document.getElementsByTagName("button");
+mode[0].addEventListener('click', f1);
+function f1(){
+    document.body.style.backgroundColor="red";
+}
+mode[1].addEventListener('click', function(){
+    document.body.style.backgroundColor="wheat";
+})
 
 
