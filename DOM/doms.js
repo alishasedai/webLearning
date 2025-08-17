@@ -91,7 +91,19 @@ let prom2 = new Promise((resolve, reject) =>{
     },1000);
    }
 })
- let p3 = Promise.any([prom1, prom2]);
+//  let p3 = Promise.any([prom1, prom2]);
+//  p3.then( (a) =>{
+//     console.log(a)
+//  }).catch( (e)=>{
+//     console.log(e);
+//  })
+//  let p3 = Promise.resolve([prom1, prom2]);
+//  p3.then( (a) =>{
+//     console.log(a)
+//  }).catch( (e)=>{
+//     console.log(e);
+//  })
+ let p3 = Promise.reject([prom1, prom2]);
  p3.then( (a) =>{
     console.log(a)
  }).catch( (e)=>{
