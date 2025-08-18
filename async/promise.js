@@ -38,9 +38,20 @@ if(isNaN(a) || isNaN(b)){
   throw SyntaxError("Sorry this is not allowd");
 }
 
+// try{
+//   console.log(sum);
+// }
+// catch(error){
+//   console.log("Error agaya Alisha");
+// }
 try{
-  console.log(sum);
+  console.log(sum*.x);
 }
+
+
 catch(error){
-  console.log("Error agaya Alisha");
+    // console.log("Error agaya Alisha");
+    alert(error.name);
+    alert(error.message);
+    alert(error.stack);
 }
