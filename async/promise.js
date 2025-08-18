@@ -32,7 +32,11 @@
 
 let a = prompt('Enter a 1st number');
 let b = prompt('Enter a 2nd number ');
-let sum = parseInt(a)+ parseInt(b)
+let sum = parseInt(a)+ parseInt(b);
+
+if(isNaN(a) || isNaN(b)){
+  throw SyntaxError("Sorry this is not allowd");
+}
 
 console.log(sum);
 console.log("This is try catch");
