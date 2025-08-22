@@ -119,7 +119,34 @@ body{
         position: absolute;
         top: 160px;
         right: 17px;
+        opacity: 0;
+        transition: all 1s ease-out;
         /* font-size: 50px; */
     }
+    .buttons > *{
+        margin: 0 12px;
+    }
    
+    .signupbtn{
+        background-color: rgb(34,34,34);
+        color: rgb(156, 148, 148);
+        font-weight: bold;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 16px;
+
+    }
+    .signupbtn:hover{
+        font-size: 17px;
+        color: white;
+    }
+    .loginbtn{
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        padding: 10px;
+        font-weight: bold;
+
+    }
 
