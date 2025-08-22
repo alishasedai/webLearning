@@ -41,7 +41,7 @@ body{
         width: 20px;
     }
     .library{
-        min-height: 50vh;
+        min-height: 80vh;
         position: relative;
     }
     .footer{
@@ -67,6 +67,7 @@ body{
     }
     .right{
         margin: 16px 0;
+        position: relative;
     }
 
     .signupbtn{
@@ -82,6 +83,7 @@ body{
         padding: 10px;
         border-radius: 5px;
         background-color: #252525;
+       
 
     }
     .cardContainer{
@@ -90,15 +92,9 @@ body{
         gap: 10px;
         margin: 30px;
         overflow-y: scroll;
-        max-height: 70vh;
+        max-height: 60vh;
     }
-    .card{
-        position: relative;
-        width: 200px;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #252525;
-    }
+
     .card > *{
         padding-top: 10px;
     }
@@ -160,3 +156,15 @@ body{
 
     }
 
+    .playbar{
+        position: absolute;
+        bottom: 0;
+        background-color: green;
+        width: 100%;
+        padding: 12px;
+    }
+    .songsbutton{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
