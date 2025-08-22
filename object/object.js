@@ -32,7 +32,7 @@ class Animal{
  class Lion extends Animal{
     constructor(name) {
         super(name);
-        console.log("Lion object is created")
+        console.log(" object is created and he is a lion")
 
     }
 
