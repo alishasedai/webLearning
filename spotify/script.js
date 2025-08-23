@@ -24,10 +24,15 @@ getSongs().then(songs =>
     console.log(songs)
 ) // or
 
-/*async function main() {
-    const songs = await getSongs();
-    console.log(songs); // यहाँ songs को actual array देखिन्छ
-}
+async function main() {
+    //get the list of all the songs
 
+
+    let songs = await getSongs();
+    console.log(songs); // यहाँ songs को actual array देखिन्छ
+
+    //play the first songs
+    var audio = new Audio(songs[0]);
+    audio.play()
+}
 main(); // wrapper function call
-*/
