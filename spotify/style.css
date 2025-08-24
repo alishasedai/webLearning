@@ -3,21 +3,21 @@
     margin: 0px;
     padding: 0px;
 }
-
 body{
-    /* background-color: black;
-    color: white; */
-  
+    height: 50vh;
 }
 
+.container{
+    height: 99.9vh;
+}
 
 .left{
-    width: 25vw;
-    padding: 10px;
+    width: 28vw;
+    /* padding: 10px; */
     
 }
 .right{
-    width: 75vw;
+    width: 72vw;
 }
 .home ul li{
     width: 15px;
@@ -41,7 +41,7 @@ body{
         width: 20px;
     }
     .library{
-        min-height: 80vh;
+        height: 75vh;
         position: relative;
     }
     .footer{
@@ -49,8 +49,10 @@ body{
         font-size: 11px;
         gap: 13px;
         position: absolute;
-        bottom: 0;
-        padding-top:10px ;
+        bottom: 2.5%;
+        left: 0;
+        /* padding-top:10px ; */
+        
     }
     .footer div a span{
         color: grey;
@@ -58,9 +60,11 @@ body{
     }
 
     .header{
+
         display: flex;
         justify-content: space-between;
-        background-color: rgb(34,34,34);
+        background-color: rgb(34, 34, 34);
+        height: 70px;
     }
     .header > *{
         padding: 20px;
@@ -78,7 +82,7 @@ body{
         padding: 6px;
     }
     .spotifyPlaylist .card{
-        width: 200px;
+        width: 150px;
         /* border: 1px solid red; */
         padding: 10px;
         border-radius: 5px;
@@ -90,7 +94,7 @@ body{
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
-        margin: 30px;
+        margin: 20px;
         overflow-y: scroll;
         max-height: 60vh;
     }
@@ -105,7 +109,7 @@ body{
     .card .play{
         width: 28px;
         height: 28px;
-        background-color: #1fdf64;
+        /* background-color: #1fdf64; */
         border-radius: 50%;
         padding: 4px;
         /* border: 2px solid #000; */
@@ -159,8 +163,8 @@ body{
     .playbar{
         position: absolute;
         bottom: 0;
-        background-color: green;
-        width: 100%;
+        background-color: rgb(215, 239, 213);
+        width: 90%;
         padding: 12px;
     }
     .songsbutton{
@@ -168,3 +172,34 @@ body{
         justify-content: center;
         gap: 20px;
     }
+
+    .songList {
+        /* padding:  12px; */
+
+    }
+     .songList ul {
+        padding: 0 42px;
+
+    }
+    .songList ul li{
+        list-style-type: decimal;
+        display: flex;
+        gap: 34px;
+        cursor: pointer;
+        padding: 8px 0;
+        font-size: 12px;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+    .playnow{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    
