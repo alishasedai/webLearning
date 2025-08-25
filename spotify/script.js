@@ -32,7 +32,19 @@ async function main() {
     // console.log(songs); // यहाँ songs को actual array देखिन्छ
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
     for(const song of songs ){
-        songUL.innerHTML += `<li>${song.replaceAll("%20" ," ")}</li>`;
+        songUL.innerHTML += `<li>
+       
+                    <img class="invert" src="./img/music.svg" alt="music">
+                    <div class="info">
+                        <div> ${song.replaceAll("%20" ," ")}</div>
+                        <div>Song artist</div>
+                    </div>
+                   <div class="playnow">
+                    <span>Play now</span>
+                     <img class="invert" src="./img/play.svg" alt="">
+                   </div>
+                 
+       </li>`;
     }
 
     //play the first songs
