@@ -26,10 +26,10 @@ getSongs().then(songs =>
 
 async function main() {
     //get the list of all the songs
-
-
     let songs = await getSongs();
     // console.log(songs); // यहाँ songs को actual array देखिन्छ
+
+    // show all the songs in the playlist
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
     for(const song of songs ){
         songUL.innerHTML += `<li>
@@ -42,19 +42,16 @@ async function main() {
                    <div class="playnow">
                     <span>Play now</span>
                      <img class="invert" src="./img/play.svg" alt="">
-                   </div>
-                 
-       </li>`;
+                   </div></li>`;
     }
-
     //play the first songs
-    var audio = new Audio(songs[0]);
+    // var audio = new Audio(songs[0]);
     // audio.play()
 
 
-    audio.addEventListener("loadeddata", ()=>{
+    // audio.addEventListener("loadeddata", ()=>{
         
-        console.log(audio.duration, audio.currentSrc, audio.currentTime);
-    })
+    //     console.log(audio.duration, audio.currentSrc, audio.currentTime);
+    // })
 }
 main(); // wrapper function call
