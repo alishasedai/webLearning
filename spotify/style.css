@@ -2,14 +2,21 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
-body{
-    height: 50vh;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-.container{
-    height: 99.9vh;
+
+.container {
+    width: 100%; /* avoids overflow caused by scrollbar */
+    max-width: 100%;
+    height: 100vh;
+    overflow-x: hidden; /* hides any accidental overflow */
 }
+
 
 .left{
     width: 28vw;
@@ -95,8 +102,8 @@ body{
         flex-wrap: wrap;
         gap: 10px;
         margin: 20px;
-        overflow-y: scroll;
-        max-height: 60vh;
+        overflow-y: auto;
+        /* max-height: 60vh; */
     }
 
     .card > *{
@@ -120,7 +127,6 @@ body{
         top: 160px;
         right: 17px;
         opacity: 0;
-        transition: all 1s ease-out;
         /* font-size: 50px; */
     }
     .buttons > *{
@@ -161,28 +167,56 @@ body{
     }
 
     .playbar{
-        position: absolute;
-        bottom: 0;
+        position: relative;
+        top: 15%;
+        left: 0;
         filter: invert(1);
         background: #dad5d5;
         border-radius: 30px;
-        width: 90%;
-        padding: 12px;
+        width: 100%;
+        padding: 18px;
         height: 30px;
     }
+
+      .seekbar{
+       height: 2px;
+       width: 100%;
+       box-sizing: border-box;
+       border: 2px solid black;
+       position: absolute;
+       bottom: -30%;
+       border-radius: 10px;
+
+    }
+    .circle{
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border-radius: 15px;
+        position: absolute;
+        bottom: -6.5px;
+        left: -12px;
+    }
+    
     .songsbutton{
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 20px;
+        
+        
     }
 
     .songList .info{
         font-size: 13px;
         /* padding:  12px; */
+          white-space: nowrap;     /* लाइन नटुट्ने */
+  overflow: hidden;     
+  
 
     }
      .songList ul {
-        padding: 12px;
+        padding: 0 12px;
 
     }
     .songList ul li{
@@ -196,9 +230,10 @@ body{
         font-size: 12px;
         border: 1px solid white;
         border-radius: 3px;
-        margin: 10px 0;
+        margin: 8px 0;
         align-items: center;
         justify-content: space-between;
+        /* background-color: red; */
 
 
     }
@@ -212,26 +247,9 @@ body{
         width: 50px;
     }
     .songList{
-        height: 310px;
+        height: 270px;
         overflow: auto;
         margin: 24px 0;
     }
-    .seekbar{
-       height: 2px;
-       width: 98%;
-       border: 2px solid black;
-       position: absolute;
-       bottom: 0;
-       border-radius: 10px;
-
-    }
-    .circle{
-        width: 15px;
-        height: 15px;
-        background-color: black;
-        border-radius: 15px;
-        position: absolute;
-        bottom: -6.5px;
-        left: -12px;
-    }
+  
     
