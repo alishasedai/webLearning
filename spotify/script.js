@@ -1,3 +1,5 @@
+console.log("Lets write javascript");
+ let currentSong = new Audio();
 
 async function getSongs(){
     
@@ -26,12 +28,22 @@ getSongs().then(songs =>
 
 
 const playMusic = (track)=>{
-    let audio = new Audio("songs/" +track)
-    audio.play() 
+    // let audio = new Audio("songs/" +track)
+    currentSong.src = "songs/" +track
+    // audio.play() 
+    currentSong.play()
+    play.src = "./img/pause.svg";
+    document.querySelector(".songinfo").innerHTML = track;
+document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
+
+
+    
+    
+
 }
 
 async function main() {
-    let currentSong;
+   
     //get the list of all the songs
     let songs = await getSongs();
     // console.log(songs); // यहाँ songs को actual array देखिन्छ
@@ -69,8 +81,19 @@ async function main() {
              playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
         })
        
-    }
+    })
 
-    )
+    // Attach an event Listener to play, next and previous songs
+    play.addEventListener("click", ()=>{
+        if(currentSong.paused){
+            currentSong.play();
+            play.src = "./img/pause.svg";
+        }
+        else{
+            currentSong.pause();
+            play.src = "./img/play.svg"
+        }
+    })
+
 }
 main(); // wrapper function call
