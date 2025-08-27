@@ -24,6 +24,12 @@ getSongs().then(songs =>
     console.log(songs)
 ) // or
 
+
+const playMusic = (track)=>{
+    let audio = new Audio("songs/" +track)
+    audio.play() 
+}
+
 async function main() {
     let currentSong;
     //get the list of all the songs
@@ -58,7 +64,11 @@ async function main() {
     //attach an event listener to each songs
 
     Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
-        console.log(e.querySelector(".info").firstElementChild.innerHTML)
+        e.addEventListener("click",element=>{
+             console.log(e.querySelector(".info").firstElementChild.innerHTML);
+             playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
+        })
+       
     }
 
     )
