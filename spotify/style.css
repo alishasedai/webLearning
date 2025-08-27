@@ -70,11 +70,12 @@ html, body {
 
         display: flex;
         justify-content: space-between;
-        background-color: rgb(34, 34, 34);
-        height: 70px;
+        background-color: rgb(39, 39, 39);
+        /* background-color: red; */
+        height: 50px;
     }
     .header > *{
-        padding: 20px;
+        padding: 10px;
     }
     .right{
         margin: 16px 0;
@@ -82,14 +83,15 @@ html, body {
     }
 
     .signupbtn{
-        padding: 10px;
+        padding: 2px;
     }
     .spotifyPlaylist{
         color: white;
         padding: 6px;
     }
     .spotifyPlaylist .card{
-        width: 150px;
+        width: 160px;
+        height: 240px;
         /* border: 1px solid red; */
         padding: 10px;
         border-radius: 5px;
@@ -102,8 +104,8 @@ html, body {
         flex-wrap: wrap;
         gap: 10px;
         margin: 20px;
-        overflow-y: auto;
-        /* max-height: 60vh; */
+        overflow-y: scroll;
+        max-height: 48vh;
     }
 
     .card > *{
@@ -116,10 +118,8 @@ html, body {
     .card .play{
         width: 28px;
         height: 28px;
-        /* background-color: #1fdf64; */
         border-radius: 50%;
         padding: 4px;
-        /* border: 2px solid #000; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -127,10 +127,14 @@ html, body {
         top: 160px;
         right: 17px;
         opacity: 0;
-        /* font-size: 50px; */
+    }
+    .card p{
+        font-size: 12px;
     }
     .buttons > *{
-        margin: 0 12px;
+        margin: 0 6px;
+        width: auto;
+        height: 30px;
     }
    
     .signupbtn{
@@ -141,6 +145,8 @@ html, body {
         outline: none;
         cursor: pointer;
         font-size: 16px;
+        /* background-color: red; */
+     
 
     }
     .signupbtn:hover{
@@ -151,7 +157,7 @@ html, body {
         background-color: white;
         color: black;
         border-radius: 21px;
-        padding: 10px;
+        /* padding: 15px; */
         font-weight: bold;
         width: 79px;
         cursor: pointer;
@@ -167,6 +173,7 @@ html, body {
     }
 
     .playbar{
+
         position: relative;
         top: 15%;
         left: 0;
@@ -175,17 +182,20 @@ html, body {
         border-radius: 30px;
         width: 100%;
         padding: 18px;
-        height: 30px;
+        width: 70vw;
+        border-color: red;
     }
 
       .seekbar{
        height: 2px;
-       width: 100%;
+       width: 95%;
        box-sizing: border-box;
        border: 2px solid black;
        position: absolute;
-       bottom: -30%;
+       bottom: 14%;
+       left: 3%;
        border-radius: 10px;
+       background-color: green;
 
     }
     .circle{
