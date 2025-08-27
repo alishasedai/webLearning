@@ -25,6 +25,7 @@ getSongs().then(songs =>
 ) // or
 
 async function main() {
+    let currentSong;
     //get the list of all the songs
     let songs = await getSongs();
     // console.log(songs); // यहाँ songs को actual array देखिन्छ
@@ -53,5 +54,13 @@ async function main() {
         
     //     console.log(audio.duration, audio.currentSrc, audio.currentTime);
     // })
+
+    //attach an event listener to each songs
+
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
+        console.log(e.querySelector(".info").firstElementChild.innerHTML)
+    }
+
+    )
 }
 main(); // wrapper function call
