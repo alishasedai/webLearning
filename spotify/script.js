@@ -1,6 +1,19 @@
 console.log("Lets write javascript");
  let currentSong = new Audio();
 
+ function secondsToMinutesSeconds(seconds){
+    if(isNaN(seconds) || seconds<0){
+        return "Invalid Input";
+    }
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    return `${formattedMinutes}:${formattedSeconds}`
+ }
+
 async function getSongs(){
     
 let a = await fetch("http://127.0.0.1:5500/spotify/songs/");
@@ -27,13 +40,16 @@ getSongs().then(songs =>
 ) // or
 
 
-const playMusic = (track)=>{
+const playMusic = (track, pause=false)=>{
     // let audio = new Audio("songs/" +track)
     currentSong.src = "songs/" +track
     // audio.play() 
-    currentSong.play()
+    if(!pause){
+    currentSong.play();
     play.src = "./img/pause.svg";
-    document.querySelector(".songinfo").innerHTML = track;
+    }
+    
+    document.querySelector(".songinfo").innerHTML = decodeURI(track);
 document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 
 
@@ -46,6 +62,7 @@ async function main() {
    
     //get the list of all the songs
     let songs = await getSongs();
+    playMusic(songs[0], true)
     // console.log(songs); // यहाँ songs को actual array देखिन्छ
 
     // show all the songs in the playlist
@@ -95,5 +112,12 @@ async function main() {
         }
     })
 
+    // listen for timeUpdate event
+
+    currentSong.addEventListener("timeupdate", ()=>{
+        console.log(currentSong.currentTime, currentSong.duration );
+        document.querySelector(".songtime").innerHTML = `
+        ${secondsToMinutesSeconds(currentSong.currentTime)} / ${secondsToMinutesSeconds(currentSong.duration)}`
+    })
 }
 main(); // wrapper function call
