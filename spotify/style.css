@@ -264,8 +264,15 @@ html, body {
     }
 
     .songinfo, .songtime {
-    color: black;           /* make text visible */
-    font-size: 14px;        /* readable size */
-    margin: 5px 0;
-    
-}
+      /* parent को invert हटाउने */
+  color: black;              /* वा मनपर्ने रंग */
+  font-size: 14px;
+  margin: 5px 0;
+    }
+    .abovebar{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 10px;
+    }
+
