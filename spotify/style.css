@@ -23,6 +23,7 @@ html, body {
     padding: 10px;
     
 }
+
 .right{
     width: 72vw;
 }
@@ -307,5 +308,10 @@ html, body {
   .hamburger{
     display: block;
   }
+  .left .close{
+    position: absolute;
+    left: 85%;
+    top: 3%;
+}
 
 }

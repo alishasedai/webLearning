@@ -135,5 +135,11 @@ async function main() {
     document.querySelector(".hamburger").addEventListener("click", ()=>{
         document.querySelector(".left").style.left = "0"
     })
+
+    //Add event listener for close buttons
+
+    document.querySelector(".close").addEventListener("click", ()=>{
+        document.querySelector(".left").style.left = "-100%";
+    })
 }
 main(); // wrapper function call
