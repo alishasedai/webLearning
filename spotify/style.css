@@ -290,6 +290,11 @@ html, body {
   color: black;              /* वा मनपर्ने रंग */
   font-size: 14px;
   margin: 5px 0;
+
+    }
+    .songinfo{
+        width: 250px ;
+        border-color: red;
     }
     .abovebar{
         display: flex;
@@ -315,6 +320,9 @@ html, body {
     margin: 0;
   }
   
+  .songinfo, .songtime{
+    width: auto;
+  }
   .playbar{
     width: calc(100vw - 30px);
   }
