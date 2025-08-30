@@ -103,11 +103,11 @@ html, body {
     .cardContainer{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        /* justify-content: center; */
         gap: 10px;
         margin: 20px;
         overflow-y: auto;
-        max-height: 48vh;
+        max-height: 40vh;
 
         
     }
@@ -188,14 +188,16 @@ html, body {
         border-radius: 30px;
         min-height: 40px;
         padding: 18px;
-        width: 88vw;
+        /* width: 88vw; */
+        margin: 10px;
         border-color: red;
-        width: calc(100vw - 60px);
+         /* width: calc(100vw - 60px); */
+        
     }
 
       .seekbar{
        height: 2px;
-       width: calc(100vw - 60px);
+       width: 66.5vw;
        box-sizing: border-box;
        border: 3px solid black;
        position: absolute;
@@ -307,10 +309,15 @@ html, body {
   }
   .right{
     width: 100vw;
+    margin: 0;
   }
   
   .playbar{
-    width: 95vw;
+    width: calc(100vw - 30px);
+  }
+
+  .seekbar{
+    width: 86vw;
   }
   .hamburger{
     display: block;
@@ -321,5 +328,19 @@ html, body {
     left: 85%;
     top: 3%;
 }
+.abovebar{
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+.cardContainer .card{
+        width: 86vw;
+        height: auto;
+}
+.cardContainer{
+    margin: 0;
+}
+
 
 }
