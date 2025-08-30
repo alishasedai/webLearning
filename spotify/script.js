@@ -1,5 +1,6 @@
 console.log("Lets write javascript");
  let currentSong = new Audio();
+   let songUL;
 
  function secondsToMinutesSeconds(seconds){
     if(isNaN(seconds) || seconds<0){
@@ -66,7 +67,7 @@ async function main() {
     // console.log(songs); // यहाँ songs को actual array देखिन्छ
 
     // show all the songs in the playlist
-    let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
+  songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
     for(const song of songs ){
         songUL.innerHTML += `<li>
        
@@ -141,5 +142,28 @@ async function main() {
     document.querySelector(".close").addEventListener("click", ()=>{
         document.querySelector(".left").style.left = "-110%";
     })
+
+    // Add an event listener to previous and next
+    previous.addEventListener("click", ()=>{
+        console.log("previous clicked")
+        console.log(currentSong)
+
+         let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        
+        console.log(songs, index);
+
+        if((index-1)  >= 0)
+        playMusic(songs[index-1])
+    })
+
+    next.addEventListener("click", ()=>{
+        console.log("next clicked");
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
+        
+        console.log(songs, index);
+
+        if((index+1)  >= length)
+        playMusic(songs[index+1])
+    })  
 }
 main(); // wrapper function call
