@@ -164,7 +164,14 @@ async function main() {
         console.log(songs, index);
 
         if((index+1) < songs.length-1)
-        playMusic(songs[index+1])
+        playMusic(songs[index+1]);
     })  
+
+    // add an event to volume
+    document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e)=>{
+        console.log(e, e.target, e.target.value)
+        currentSong.volume = parseInt(e.target.value)/100
+    })
 }
 main(); // wrapper function call
+console.log("helloo ALisha")
