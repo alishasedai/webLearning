@@ -4,6 +4,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
+:root{
+  --a: 0;
+}
 html,
 body {
   max-width: 100%;
@@ -58,7 +61,9 @@ body {
   bottom: 2.5%;
   left: 0;
   margin-left: 30px;
+  padding: 10px 0;
 }
+
 .footer div a span {
   color: grey;
   color: white;
@@ -92,10 +97,17 @@ body {
 .spotifyPlaylist .card {
   width: 160px;
   height: 240px;
+  cursor: pointer;
   /* border: 1px solid red; */
   padding: 10px;
   border-radius: 5px;
   background-color: #252525;
+   position: relative;
+   transition: all 0.9s ease-out;
+}
+.card:hover{
+  background-color: rgb(104, 103, 103);
+  --a: 1;
 }
 .cardContainer {
   display: flex;
@@ -114,19 +126,24 @@ body {
   width: 100%;
   object-fit: contain;
 }
+
 .card .play {
   width: 28px;
   height: 28px;
   border-radius: 50%;
+  background-color: #1fdf64;
   padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 160px;
+  top: 128px;
   right: 17px;
-  opacity: 0;
+  opacity: var(--a);
+  transition: all 1s ease-out;
 }
+
+
 .card p {
   font-size: 12px;
 }
