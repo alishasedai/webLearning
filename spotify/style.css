@@ -310,10 +310,11 @@ body {
     padding: 0;
     width: 350px;
     position: absolute;
-    left: -120%;
+    left: -140%;
     transition: left 0.3s ease-in;
     z-index: 1;
     background-color: black;
+    height: 100vh;
   }
   .right {
     width: 100vw;
@@ -355,7 +356,7 @@ body {
     margin: 0;
     /* background-color: red; */
     justify-content: center;
-    max-height: 40vh;
+    max-height: 49.5vh;
   }
 
   .timevol {
@@ -365,4 +366,14 @@ body {
     flex-direction: column;
     gap: 13px;
   }
+}
+
+
+@media (max-width: 400px) {
+    .cardContainer .card{
+        width: 84vw;
+    }
+    .cardContainer{
+        height: 40vh;
+    }
 }
