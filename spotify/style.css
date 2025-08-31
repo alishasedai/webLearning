@@ -305,12 +305,12 @@ body {
 }
 
 /*Now responsive*/
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .left {
     padding: 0;
     width: 350px;
     position: absolute;
-    left: -110%;
+    left: -120%;
     transition: left 0.3s ease-in;
     z-index: 1;
     background-color: black;
@@ -348,13 +348,14 @@ body {
   }
 
   .cardContainer .card {
-    width: 86vw;
+    width: 43vw;
     height: auto;
   }
   .cardContainer {
     margin: 0;
     /* background-color: red; */
-    max-height: 50vh;
+    justify-content: center;
+    max-height: 40vh;
   }
 
   .timevol {

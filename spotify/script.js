@@ -95,7 +95,7 @@ async function main() {
 
     Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e=>{
         e.addEventListener("click",element=>{
-             console.log(e.querySelector(".info").firstElementChild.innerHTML);
+            
              playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
         })
        
@@ -146,11 +146,11 @@ async function main() {
     // Add an event listener to previous and next
     previous.addEventListener("click", ()=>{
         console.log("previous clicked")
-        console.log(currentSong)
+        
 
          let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
         
-        console.log(songs, index);
+        
 
         if((index-1)  >= 0)
         playMusic(songs[index-1])
@@ -169,9 +169,9 @@ async function main() {
 
     // add an event to volume
     document.querySelector(".range").getElementsByTagName("input")[0].addEventListener("change", (e)=>{
-        console.log(e, e.target, e.target.value)
+        console.log("Setting volume to", e.target.value, "/100")
         currentSong.volume = parseInt(e.target.value)/100
     })
 }
 main(); // wrapper function call
-console.log("helloo ALisha")
+
