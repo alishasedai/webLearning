@@ -4,7 +4,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
-:root{
+:root {
   --a: 0;
 }
 html,
@@ -102,10 +102,10 @@ body {
   padding: 10px;
   border-radius: 5px;
   background-color: #252525;
-   position: relative;
-   transition: all 0.9s ease-out;
+  position: relative;
+  transition: all 0.9s ease-out;
 }
-.card:hover{
+.card:hover {
   background-color: rgb(104, 103, 103);
   --a: 1;
 }
@@ -142,7 +142,6 @@ body {
   opacity: var(--a);
   transition: all 1s ease-out;
 }
-
 
 .card p {
   font-size: 12px;
@@ -295,6 +294,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  cursor: pointer;
+}
+.range input{
+  cursor: pointer;
 }
 
 .songinfo {
@@ -385,12 +388,11 @@ body {
   }
 }
 
-
 @media (max-width: 400px) {
-    .cardContainer .card{
-        width: 84vw;
-    }
-    .cardContainer{
-        height: 40vh;
-    }
+  .cardContainer .card {
+    width: 84vw;
+  }
+  .cardContainer {
+    height: 40vh;
+  }
 }
