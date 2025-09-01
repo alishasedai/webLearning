@@ -1,4 +1,4 @@
-console.log("Lets write javascript");
+// console.log("Lets write javascript");
  let currentSong = new Audio();
 
  let songs = [];
@@ -23,8 +23,6 @@ async function getSongs(folder){
     
 // let a = await fetch(`http://127.0.0.1:5500/songs/${folder}`);
 let a = await fetch(`songs/${folder}/`);
-
-
 let response = await a.text();
 // console.log(response);
 let div = document.createElement("div");
@@ -83,14 +81,29 @@ const playMusic = (track, pause=false)=>{
 document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 }
 
-async function main() {
-    
+  
+   async function displayAlbums() {
+//    let a = await fetch(`http://127.0.0.1:5500/spotify/songs/`);
+      let a = await fetch("./songs/");
 
+    let response = await a.text();
+    // console.log(response);
+    let div = document.createElement("div");
+    div.innerHTML = response;
+   let anchors = div.getElementsByTagName("a");
+    console.log(anchors);
+    Array.from(anchors).forEach(e=>{
+        if(e.href.includes("/songs/"))
+            console.log(e.href)
+    })
+   }
+
+async function main() {
    await getSongs("ncs");
 
    playMusic(songs[0], true);
- 
-   
+  //display all the album on the page
+  displayAlbums()
 
     // Attach an event Listener to play, next and previous songs
     play.addEventListener("click", ()=>{
@@ -107,7 +120,7 @@ async function main() {
     // listen for timeUpdate event
 
     currentSong.addEventListener("timeupdate", ()=>{
-        console.log(currentSong.currentTime, currentSong.duration );
+        // console.log(currentSong.currentTime, currentSong.duration );
         document.querySelector(".songtime").innerHTML = `
         ${secondsToMinutesSeconds(currentSong.currentTime)} / ${secondsToMinutesSeconds(currentSong.duration)}`;
 
@@ -136,7 +149,7 @@ async function main() {
 
     // Add an event listener to previous and next
     previous.addEventListener("click", ()=>{
-        console.log("previous clicked")
+        // console.log("previous clicked")
          let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
         if((index-1)  >= 0)
         playMusic(songs[index-1])
@@ -144,9 +157,9 @@ async function main() {
     // add am event listener to next
     next.addEventListener("click", ()=>{
         
-        console.log("next clicked");
+        // console.log("next clicked");
         let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0])
-        console.log(songs, index);  
+        // console.log(songs, index);  
         if((index+1) < songs.length-1)
         playMusic(songs[index+1]);
     })  
@@ -159,9 +172,9 @@ async function main() {
 
     // Load the playlist whenever the card is clicked
     Array.from(document.getElementsByClassName("card")).forEach((e)=>{
-        console.log(e)
+       
         e.addEventListener("click", async item=>{
-            console.log(item, item.target.dataset)
+            // console.log(item, item.target.dataset)
             songs =await getSongs(`${item.currentTarget.dataset.folder}`)
             
         })
