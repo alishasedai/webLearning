@@ -40,6 +40,8 @@ async function getSongs(folder) {
       songs.push(element.href.split(`${folder}/`)[1]);
     }
   }
+  // play the first songs
+
 
   // show all the songs in th playlist
   songUL = document.querySelector(".songList").getElementsByTagName("ul")[0];
@@ -64,6 +66,7 @@ async function getSongs(folder) {
       playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim());
     });
   });
+  return songs
 }
 
 const playMusic = (track, pause = false) => {
@@ -122,6 +125,7 @@ async function displayAlbums() {
         e.addEventListener("click", async (item) => {
           // console.log(item, item.target.dataset)
           songs = await getSongs(`${item.currentTarget.dataset.folder}`);
+          playMusic(songs[0])
         });
       });
     }
