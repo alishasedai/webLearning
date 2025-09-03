@@ -278,6 +278,7 @@ body {
 
 .hamburger {
   display: none;
+  cursor: pointer;;
 }
 .hamburgerIcons {
   display: flex;
