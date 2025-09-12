@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const blog = require('./routes/blog')
 const fs = require("fs");
 
 app.use(express.static("public"))
+
+app.use('/blog', blog)
 
 app.use((req, res, next) => {
     console.log(req.headers);
