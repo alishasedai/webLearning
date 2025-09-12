@@ -1,15 +1,30 @@
 const express = require("express");
 const app = express();
 const port = 3000;
+const fs = require("fs");
 
-app.get("/", (reg, res) => {
+app.use(express.static("public"))
+
+app.use((req, res, next) => {
+    console.log(req.headers);
+    req.harry = "I am not harry"
+    fs.appendFileSync("logs.txt", `${Date.now()} is a ${req.method}\n`)
+    next()
+});
+app.use((req, res, next) => {
+  console.log("m1");
+  next(); // pass to the next middleware/route
+});
+
+
+app.get("/", (req, res) => {
   res.send("Hellow World!!");
 });
-app.get("/about", (reg, res) => {
-  res.send("Hellow about page!!");
+app.get("/about", (req, res) => {
+  res.send("Hellow about page!!" + req.harry);
 });
 
-app.get("/contact", (reg, res) => {
+app.get("/contact", (req, res) => {
   res.send("Hellow contact page!!");
 });
 app.listen(port, () => {
