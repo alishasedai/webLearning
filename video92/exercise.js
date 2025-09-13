@@ -6,7 +6,7 @@ import path from "path";
 
 const basepath = "C:\\Users\\Asus\\Desktop\\SigmaDev\\video92";
 let files = await fs.readdir(basepath);
-// console.log(files);
+console.log(files);
 
 for (const items of files) {
   let ext = items.split(".")[items.split(".").length - 1];
