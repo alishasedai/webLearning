@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import fsn from "fs";
 // import { exit } from "process";
 import path from "path";
-// console.log(fs)
+console.log(fs)
 
 const basepath = "C:\\Users\\Asus\\Desktop\\SigmaDev\\video92";
 let files = await fs.readdir(basepath);
