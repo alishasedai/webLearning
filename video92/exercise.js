@@ -20,5 +20,5 @@ for (const items of files) {
       fs.rename(path.join(basepath, items), path.join(basepath, ext, items));
     }
   }
-  // console.log(items)
+  console.log(items)
 }
