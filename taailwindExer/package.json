@@ -1,0 +1,20 @@
+{
+  "name": "tailwind_exercise",
+  "version": "1.0.0",
+  "description": "exercise doing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [
+    "alisha",
+    "tailwinds"
+  ],
+  "author": "Alisha Sedai",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
