@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Footer from '../component/Footer' ;
 const Navbar = () => {
   return (
     <div>
@@ -10,6 +10,7 @@ const Navbar = () => {
         <li>Blog</li>
         
       </ul>
+    <Footer/>
     </div>
   );
 }
