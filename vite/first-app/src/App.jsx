@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar.jsx"
 import Footer from "./components/Footer.jsx"
-import Card from "./components/card.jsx"
+import Card from "./components/Card.jsx"
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <div className="cards">
-         <Card />
+        <Card />
       </div>
       <Footer />
     </>
