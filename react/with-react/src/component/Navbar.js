@@ -1,8 +1,9 @@
 import React from 'react'
 import Footer from '../component/Footer' ;
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
+        <div className='logo'>{props.logoText}</div>
       <ul>
         <li>Home</li>
         <li>About</li>

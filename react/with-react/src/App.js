@@ -30,7 +30,7 @@ function Counter(){
   const [count, setCount] = useState(20);
   return (
     <div className='App'>
-      <Navbar/>
+      <Navbar logoText="COde with Alisha"/>
       <p>Count : {count}</p>
       <button onClick={() => setCount(count-1)}> Click me</button>
       <Footer/>
