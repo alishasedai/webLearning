@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Navbar from '../src/component/Navbar';
+import Footer from '../src/component/Footer'
 
 // function App() {
 //   return (
@@ -25,12 +27,16 @@ import { useState } from 'react';
 
 // export default App;
 function Counter(){
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(20);
   return (
-    <div>
+    <div className='App'>
+      <Navbar/>
       <p>Count : {count}</p>
-      <button onClick={() => setCount(count +1)}> Increase</button>
+      <button onClick={() => setCount(count-1)}> Click me</button>
+      
     </div>
   )}
 
 export default Counter;
+
+
