@@ -1,0 +1,9 @@
+.footerN{
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(30, 26, 26);
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
