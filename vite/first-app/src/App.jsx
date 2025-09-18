@@ -5,8 +5,11 @@ function App() {
 
   return (
     <>
-    <Navbar/>
-    <Footer/>
+      <Navbar />
+    <main>
+      This is the main content and now section is starting
+    </main>
+      <Footer />
     </>
   )
 }
