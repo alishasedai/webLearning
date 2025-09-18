@@ -4,9 +4,8 @@
 
 .card{
     width: 20vw;
-    height: 20vh;
+    height: 30vh;
     border: 2px solid black;
     margin: 14px;
-    padding: 10px;
-    padding: auto;
+    overflow: hidden;
 }
