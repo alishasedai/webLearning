@@ -5,6 +5,10 @@ import Navbar from './Navbar'
 import './App.css'
 
 function App() {
+  const [todo, setTodo] = useState("")
+  const [todos, setTodos] = useState([])
+  
+  
   const handleEdit = ()=>{
 
   }
@@ -12,6 +16,9 @@ function App() {
 
   }
 
+   const handleAdd = ()=>{
+
+  }
   return (
     <>
      <Navbar />
@@ -19,12 +26,12 @@ function App() {
       <div className="addTodo">
         <h2 className='text-lg font-bold'>Add a Todo</h2>
         <input type="text" className='bg-white rounded-xl p-2 w-160' />
-        <button className='bg-violet-700 hover:bg-violet-800 p-3 font-bold py-1 text-white rounded-xl mx-6'>Add</button>
+        <button onClick={handleAdd} className='bg-violet-700 hover:bg-violet-800 p-3 font-bold py-1 text-white rounded-xl mx-6'>Add</button>
       </div>
         <h1 className='text-2xl font-b'>Your Todos</h1>
      <div className="todos">
       <div className="todo flex">
-        <div className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, et.</div>
+        <div className="text">{todo}</div>
         <div className="buttons">
           <button onClick={handleEdit} className='bg-violet-700 hover:bg-violet-800 p-3 font-bold py-1 text-white rounded-xl mx-2'>Edit</button>
           <button onClick={handleDelete} className='bg-violet-700 hover:bg-violet-800 p-3 font-bold py-1 text-white rounded-xl mx-2'>Delete</button>
