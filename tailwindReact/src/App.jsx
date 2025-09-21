@@ -7,7 +7,7 @@ import './App.css'
 function App() {
   const [todo, setTodo] = useState("")
   const [todos, setTodos] = useState([])
-  
+
   
   const handleEdit = ()=>{
 
@@ -17,6 +17,7 @@ function App() {
   }
 
    const handleAdd = ()=>{
+    setTodo 
 
   }
   return (
