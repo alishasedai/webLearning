@@ -13,8 +13,12 @@ function App() {
   const handleEdit = ()=>{
 
   }
-   const handleDelete = ()=>{
-
+   const handleDelete = (e,id)=>{
+    
+    let newTodos = todos.filter(item =>{
+      return item.id!==id
+    })
+    setTodos(newTodos)
   }
 
    const handleAdd = ()=>{
@@ -50,14 +54,17 @@ const handleChange = (e) =>{
       </div>
         <h1 className='text-2xl font-b'>Your Todos</h1>
      <div className="todos">
+      {todos.length === 0 && <div className='m-3 text-2xl'>No Todos to display</div>}
       {todos.map(item=>{
 
       return <div key={item.id} className="todo flex my-2 justify-between w-1/2">
-        <input name={item.id} onChange={handleCheckBox} type="checkbox" value={item.isCompleted} />
+        <div className='flex gap-4'>
+          <input name={item.id} onChange={handleCheckBox} type="checkbox" value={item.isCompleted} />
         <div className={item.isCompleted?"line-through":""}>{item.todo}</div>
+        </div>
         <div className="buttons">
           <button onClick={handleEdit} className='bg-violet-700 hover:bg-violet-800 p-3 font-bold py-1 text-white rounded-xl mx-2'>Edit</button>
-          <button onClick={handleDelete} className='bg-violet-700 hover:bg-violet-800 p-3 font-bold py-1 text-white rounded-xl mx-2'>Delete</button>
+          <button onClick={(e)=>{handleDelete(e,item.id)} } className='bg-violet-700 hover:bg-violet-800 p-3 font-bold py-1 text-white rounded-xl mx-2'>Delete</button>
         </div>
       </div>
   })}
