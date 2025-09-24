@@ -5,14 +5,11 @@ import './App.css'
 
 function App() {
 const [visible, setVisible] = useState(false);
-
-
-
-
   return (
     <>
       <button onClick={() => setVisible(!visible)}>Toggle</button>
 {visible && <p>This is visible!</p>}
+
           </>
   )
 }
