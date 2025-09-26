@@ -8,10 +8,16 @@ const [visible, setVisible] = useState(false);
   return (
     <>
       <button onClick={() => setVisible(!visible)}>Toggle</button>
-{visible && <p>This is visible!</p>}
+{visible && <p>This is and i am ALisha !</p>}
 
           </>
   )
 }
 
 export default App
+
+
+
+
+
+
