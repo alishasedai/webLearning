@@ -12,7 +12,10 @@ function App() {
             Path : "/",
             element : <Home />
           },
-          {}
+          {
+             Path : "/login",
+            element : <Home />
+          }
       ]) 
 
   return (
