@@ -1,15 +1,14 @@
-function alternateCase(str) {
- let res = [];
+let arr = [1,2,3,4,5];
+let findArr = 11;
+let flage = false;
+for(let i = 0 ; i<arr.length ; i++){
+ if(arr[i] === findArr){
+    console.log("Found at index "+i );
+    flage = true;
+    break;
+ }
 
-for(let i = 0; i<str.length; i+=2){
-    res.push(arr[i]);
 }
-return res;
+if(!flage){
+    console.log("Not Found");
 }
-
-let arr = [1,2,3,4,5,6,7]
-
-let results = alternateCase(arr);
-console.log(results.join(" "));
-
-
