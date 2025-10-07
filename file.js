@@ -1,4 +1,4 @@
-console.log(typeof['Apple','Banana'])
-console.log(typeof(Number('Alisha')))
-let x = Number('Alisha')
-console.log(x)
+
+const fruits = ['apple', 'banana', 'cherry'];
+let [x,y,a,b] = fruits;
+console.log(a);
