@@ -7,8 +7,11 @@ import { use } from 'react'
 function App() {
   const [count, setCount] = useState(2)
   useEffect(() => {
-    console.log("Component Mounted")
+    alert("Component Mounted")
   }, [])
+   useEffect(() => {
+    alert("count Updated ")
+  }, [count])
 
   return (
     <>
