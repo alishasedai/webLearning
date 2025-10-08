@@ -1,10 +1,4 @@
-let age = 11
-
-if(age>12){
-    let x = 10;
-    console.log(x)
+function show() {
+  console.log(this);
 }
-else{
-    let x = 30;
-    console.log(x);
-}
+show();
