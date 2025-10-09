@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     alert("Component Rendered")
   })
-  const prevCount = useRef()
+  const prevCount = useRef( )
   return (
     
     {/* <div>The count is {count}</div>
