@@ -13,7 +13,7 @@ function App() {
     }
   })
    useEffect(() => {
-    alert("count Updated ")
+    alert("count had Updated ")
   }, [count])
 
   useEffect(() => {
