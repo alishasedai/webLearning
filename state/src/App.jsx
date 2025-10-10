@@ -6,6 +6,8 @@ import { use } from 'react'
 import { Routes, Route , Link} from 'react-router'
 import Home from './component/Home'
 import About from './component/About'
+import Navbar from './component/Navbar'
+import Login from './component/Login'
 
 
 function App() {
@@ -26,12 +28,12 @@ function App() {
   // const prevCount = useRef( )
   return (
           <>
-          <Link to = "/">Home</Link>
-          <Link to = "/about">About</Link>
-          {/* <Navbar /> */}
+         
+          <Navbar />
           <Routes>   
-            <Route path='/' element={<Home />}/>
+            <Route path='/home' element={<Home />}/>
             <Route path='/about' element={<About />}/>
+            <Route path='/login' element={<Login />}/>
               </Routes>
           </>
     
