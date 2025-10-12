@@ -56,10 +56,14 @@ const numbers = [1, 2, 3, 4, 5];
 // const newArr1 = numbers.map((n) => n * 5
 // )
 // console.log(newArr1);
-const users = [
-    {firstName : "Alisha", age : 20},
-    {firstName : "Aman", age : 22},
-    {firstName : "Ankita", age : 21},
-]
-const userNames = users.map((user) =>  user.firstName ===  "Alisha" ? "Alisaaa" : user.firstName) 
-console.log(userNames);
+// const users = [
+//     {firstName : "Alisha", age : 20},
+//     {firstName : "Aman", age : 22},
+//     {firstName : "Ankita", age : 21},
+// ]
+// const userNames = users.map((user) =>  user.firstName ===  "Alisha" ? "Alisaaa" : user.firstName) 
+// console.log(userNames);
+
+const fi = numbers.filter((n) => n !== 2)
+
+console.log(fi);
