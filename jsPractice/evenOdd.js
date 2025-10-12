@@ -48,9 +48,18 @@ const numbers = [1, 2, 3, 4, 5];
 // numbers.forEach((element ,i) => {
 //     console.log(i + " : " +element);
 // }) 
-const newArr = numbers.map((updated))
+// const newArr = numbers.map((updated))
 
-function updated(n){
-    return n *2
-}
-console.log(newArr);
+// function updated(n){
+//     return n *2
+// }
+// const newArr1 = numbers.map((n) => n * 5
+// )
+// console.log(newArr1);
+const users = [
+    {firstName : "Alisha", age : 20},
+    {firstName : "Aman", age : 22},
+    {firstName : "Ankita", age : 21},
+]
+const userNames = users.map((user) =>  user.firstName ===  "Alisha" ? "Alisaaa" : user.firstName) 
+console.log(userNames);
