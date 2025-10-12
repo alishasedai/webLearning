@@ -45,6 +45,12 @@
 //     n2 = next;
 //
 const numbers = [1, 2, 3, 4, 5];
-numbers.forEach((element ,i) => {
-    console.log(i + " : " +element);
-}) 
+// numbers.forEach((element ,i) => {
+//     console.log(i + " : " +element);
+// }) 
+const newArr = numbers.map((updated))
+
+function updated(n){
+    return n *2
+}
+console.log(newArr);
