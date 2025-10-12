@@ -11,7 +11,7 @@ import Login from './component/Login'
 
 
 function App() {
-  // const [count, setCount] = useState(2)
+  const [count, setCount] = useState(2)
   // useEffect(() => {
   //   alert("Component Mounted")
   //   return () =>{
