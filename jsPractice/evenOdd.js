@@ -43,4 +43,8 @@
 //     console.log(next)
 //     n1 = n2;
 //     n2 = next;
-// }
+//
+const numbers = [1, 2, 3, 4, 5];
+numbers.forEach((element ,i) => {
+    console.log(i + " : " +element);
+}) 
