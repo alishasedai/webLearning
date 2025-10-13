@@ -44,7 +44,7 @@
 //     n1 = n2;
 //     n2 = next;
 //
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 10];
 // numbers.forEach((element ,i) => {
 //     console.log(i + " : " +element);
 // }) 
@@ -70,5 +70,9 @@ const numbers = [1, 2, 3, 4, 5];
 let total = numbers.reduce((acc, current) => {
     console.log(`acc : ${acc} , current : ${current}`);
     return acc + current
-},0)
+},1)
 console.log(total);
+let max = numbers.reduce((acc, current) =>{
+    return current > acc ? current : acc
+})
+console.log(max);
