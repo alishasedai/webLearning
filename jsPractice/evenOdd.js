@@ -64,6 +64,11 @@ const numbers = [1, 2, 3, 4, 5];
 // const userNames = users.map((user) =>  user.firstName ===  "Alisha" ? "Alisaaa" : user.firstName) 
 // console.log(userNames);
 
-const fi = numbers.filter((n) => n !== 2)
+// const fi = numbers.filter((n) => n !== 2)
 
-console.log(fi);
+// console.log(fi);
+let total = numbers.reduce((acc, current) => {
+    console.log(`acc : ${acc} , current : ${current}`);
+    return acc + current
+},0)
+console.log(total);
