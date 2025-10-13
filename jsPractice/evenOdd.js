@@ -67,12 +67,23 @@ const numbers = [1, 2, 3, 4, 10];
 // const fi = numbers.filter((n) => n !== 2)
 
 // console.log(fi);
-let total = numbers.reduce((acc, current) => {
-    console.log(`acc : ${acc} , current : ${current}`);
-    return acc + current
-},1)
-console.log(total);
-let max = numbers.reduce((acc, current) =>{
-    return current > acc ? current : acc
-})
-console.log(max);
+// let total = numbers.reduce((acc, current) => {
+//     console.log(`acc : ${acc} , current : ${current}`);
+//     return acc + current
+// },1)
+// console.log(total);
+// let max = numbers.reduce((acc, current) =>{
+//     return current > acc ? current : acc
+// })
+// console.log(max);
+
+setTimeout(() =>{
+    console.log("hello")
+},6000)
+
+setInterval(() =>{
+    console.log("hi")
+},3000)
+
+
+
