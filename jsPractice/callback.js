@@ -17,19 +17,21 @@
     
 
 
-// function greet (callback){
-//     console.log("Good morning")
-//     setTimeout(() => {
-//         callback()
-//     },2000)
+function greet (callback){
+    console.log("Good morning")
+    setTimeout(() => {
+        callback()
+    },2000)
 
-// }
-// function asking(){
-//     console.log("How are you?")
-// }
-// setTimeout( () => {
-//     greet(asking)
-// }, 4000)
+}
+function asking(){
+    console.log("How are you?")
+}
+setTimeout( () => {
+    greet(asking)
+}, 4000)
+
+
 
 // function result(a,b)
 // {
@@ -47,15 +49,32 @@
 // calculate(5,6,result)
 
 
-function download(url,callback){
-    console.log("Downloading from " + url)
-    setTimeout(() => {
-        callback();
-    },5000)
+// function download(url,callback){
+//     console.log("Downloading from " + url)
+//     setTimeout(() => {
+//         callback();
+//     },5000)
+// }
+
+// function onDownload(){
+//     console.log("Download complete")
+// }
+// download("www.google.com", onDownload)
+
+function processData(data, callback) {
+  setTimeout(() => {
+    console.log(`Processed: ${data}`);
+    callback(); // call the callback after processing
+  }, 1000); // 1-second delay
 }
 
-function onDownload(){
-    console.log("Download complete")
-}
-download("www.google.com", onDownload)
+// Chaining example
+processData("Data 1", () => {
+  processData("Data 2", () => {
+    processData("Data 3", () => {
+      console.log("All data processed!");
+    });
+  });
+});
+
 
