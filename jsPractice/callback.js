@@ -1,19 +1,19 @@
-function hello(call){
+// function hello(call){
     
-    console.log("Starting..")
-   setTimeout(() => {
-    console.log("hello");
-    setTimeout(() =>{
-         call(); 
+//     console.log("Starting..")
+//    setTimeout(() => {
+//     console.log("hello");
+//     setTimeout(() =>{
+//          call(); 
 
-    },2000)
-   },3000)
-}
-function done(){
-    console.log("done")
-}
+//     },2000)
+//    },3000)
+// }
+// function done(){
+//     console.log("done")
+// }
 
-    hello(done)
+//     hello(done)
     
 
 
@@ -46,4 +46,16 @@ function done(){
 // }
 // calculate(5,6,result)
 
+
+function download(url,callback){
+    console.log("Downloading from " + url)
+    setTimeout(() => {
+        callback();
+    },5000)
+}
+
+function onDownload(){
+    console.log("Download complete")
+}
+download("www.google.com", onDownload)
 
