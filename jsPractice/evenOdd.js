@@ -77,13 +77,26 @@ const numbers = [1, 2, 3, 4, 10];
 // })
 // console.log(max);
 
-setTimeout(() =>{
-    console.log("hello")
-},6000)
+// setTimeout(() =>{
+//     console.log("hello")
+// },6000)
 
-setInterval(() =>{
-    console.log("hi")
-},3000)
+// setInterval(() =>{
+//     console.log("hi")
+// },3000)
 
-
+let s = [87,91,88,99,93,95,67]
+let greater = s.filter((val) =>{
+    return val > 90
+})
+console.log(greater);
+let arr = [1,2,3,4,5,6,7,8,9,10]
+let sum = arr.reduce((prev, curr) => {
+    return prev + curr
+})
+console.log(sum);
+let mul = arr.reduce((prev, curr) =>{
+    return prev * curr
+})
+console.log(mul);
 
