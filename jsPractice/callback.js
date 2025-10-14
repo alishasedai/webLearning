@@ -13,19 +13,33 @@
     
 // }, 5000)
 
-function greet (callback){
-    console.log("Good morning")
-    setTimeout(() => {
-        callback()
-    },2000)
+// function greet (callback){
+//     console.log("Good morning")
+//     setTimeout(() => {
+//         callback()
+//     },2000)
+
+// }
+// function asking(){
+//     console.log("How are you?")
+// }
+// setTimeout( () => {
+//     greet(asking)
+// }, 4000)
+
+function result(a,b)
+{
+    return a +b ;
 
 }
-function asking(){
-    console.log("How are you?")
+function calculate(x,y,callback){
+    console.log("calculating..")
+    setTimeout(() =>{
+        let res = callback(x,y)
+        console.log("Sum is :" +res)
+        
+    }, 4000)
 }
-setTimeout( () => {
-    greet(asking)
-}, 4000)
-
+calculate(5,6,result)
 
 
