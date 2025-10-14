@@ -1,6 +1,8 @@
 function hello(call){
     console.log("hello")
-    call(); 
+   setTimeout(() => {
+     call(); 
+   },3000)
 }
 function done(){
     console.log("done")
