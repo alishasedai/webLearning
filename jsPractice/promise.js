@@ -51,31 +51,36 @@ function getData(dataId){
       // reject("error occurred")
      
     }, 3000);
- })
-
-
-   
+ })   
 }
-let p = getData(1)
-p.then((err) => {
-  console.log(err);
 
-  let p1 = getData(2);
+getData(1).then((res) => {
+    return getData(2)
+}).then((res) => {
+    return getData(3)
+}).then((res) => {
+    console.log(res)
+})
+// let p = getData(1)
+// p.then((err) => {
+//   console.log(err);
 
-  p1.then((err) => {
-    console.log(err);
+//   let p1 = getData(2);
 
-    let p2 = getData(3);
-    p2.then((err) => {
-      console.log(err);
+//   p1.then((err) => {
+//     console.log(err);
+
+//     let p2 = getData(3);
+//     p2.then((err) => {
+//       console.log(err);
     
-    let p3 = getData(4);
-    p3.then((err) => {
-      console.log(err);
-    });
-    });
-  });
-}); 
+//     let p3 = getData(4);
+//     p3.then((err) => {
+//       console.log(err);
+//     });
+//     });
+//   });
+// }); 
 
 // console.log("getting data 1 ...")
 // getData(1, () => {
