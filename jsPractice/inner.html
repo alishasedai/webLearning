@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InnerText InnerHTML</title>
+  </head>
+  <body>
+    
+  </body>
+  <script>
+    let doc = document.body
+    console.log(doc)
+    let b = document.createElement("button")
+    b.innerText = "click me !"
+    b.style.backgroundColor = "red"
+    b.style.color = "white"
+    b.style.width = "200px"
+    b.style.height = "30px"
+    b.style.fontSize = "22px"
+    b.style.border = "none"
+    
+    doc.prepend(b)
+  </script>
+</html>

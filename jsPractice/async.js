@@ -1,17 +1,8 @@
-function getData(id){
-    return new Promise((resolve, reject) => {
-         setTimeout(() => {
-            console.log(" data " + id);
-            resolve("success");
-         }, 2000)
+function getDog() {
+  fetch("https://dog.ceo/api/breeds/image/random")
+    .then((response) => response.json())
+    .then((data) => {
+      document.getElementById("dogImage").src = data.message;
     })
-   
+    .catch((error) => console.error("Error:", error));
 }
-async function getAllData() {
-    await getData(1);
-    await getData(2);
-    await getData(3);
-    await getData(4);
-
-}
-getAllData()
