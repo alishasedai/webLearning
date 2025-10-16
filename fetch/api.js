@@ -9,6 +9,26 @@ const BASE_URL =
         let newOPtion = document.createElement("option");
         newOPtion.innerText = currCode;
         newOPtion.value = currCode
-        select.append(newOPtion)
+        if(select.name ==="from"  && currCode === "USD"){
+            newOPtion.selected = "selected"
+        }
+        else if (select.name === "to" && currCode === "INR"){
+            newOPtion.selected = "selected";
+        }
+          select.append(newOPtion);
     }
+    select.addEventListener("change", (evt) => {
+        updateFlag(evt.target)
+    })
   }
+
+  const updateFlag = (element) => {
+    let cur = element.value;
+    let countryCode = countryList[cur];  
+    let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
+    let img = element.parentElement.querySelector("img");
+    img.src = newSrc
+  } 
+  
+
+ 
