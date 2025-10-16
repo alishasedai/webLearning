@@ -1,0 +1,35 @@
+.container{
+    background-color: bisque;
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px;
+}
+form .amount p{
+    font-size: 24px;
+}
+ form input, option, button{
+    height: 40px ;
+    width : 100% ;
+    border-radius: 10px;
+    border: none;
+}
+.dropdown{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+}
+.select-container{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.msg{
+    margin: 10px;
+}
+.msg button{
+    margin: 20px;
+    background-color: rgb(155, 6, 254);
+    color: white;
+}
