@@ -1,17 +1,12 @@
 
 import React ,{ useRef,}from 'react'
+import Reduce from './hooks/useReducer/Reduce'
 const App = () => {
-  const c = useRef(0)
-  const ok = () => {
-    c.current.style.width = "300px"
-    c.current.style.height = "30px"
-    c.current.focus();
-  }
+  
   return (
-    <div>    
-  <input type="text" ref={c} /> <br />
-  <button onClick={ok} >Click</button>
-    </div>
+    <> <Reduce /> </> 
+       
+ 
   )
 }
 export default App
