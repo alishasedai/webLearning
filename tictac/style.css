@@ -37,7 +37,7 @@ body{
 }
 #reset-btn{
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     border: none;
     background-color: #191913;
     color: white;
@@ -45,18 +45,22 @@ body{
 
 }
 .msg-container{
-    height: 20vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
-.msg{
+#msg{
     font-size: 5vmin;
     margin-bottom: 10px;
 }
-.new-btn{
-     padding: 1rem;
+#new-btn{
+    background-color: black;
+     padding: 0.8rem;
     border-radius: 1rem;
     border: none;
-    background-color: #191913;
     color: white;
     font-size: 3vmin;
 }
