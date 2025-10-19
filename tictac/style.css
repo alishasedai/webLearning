@@ -7,11 +7,12 @@ body{
     text-align: center;
 }
 .container{
-    height: 70vh;
+    height: 60vh;
      display: flex;
-    gap: 1.5vmin;
+    gap: 0.5vmin;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 .game{
     height: 60vh;
@@ -23,8 +24,8 @@ body{
     align-items: center;
 }
 .box{
- height: 18vh;
- width: 18vh;
+ height: 16vh;
+ width: 16vh;
  /* background-color: red; */
  border-radius: 1rem;
  border: none;
@@ -32,6 +33,7 @@ body{
  font-size: 8vmin;
  font-weight: bold;
  color: #b0413e;
+ background-color: white;
 }
 #reset-btn{
     padding: 1rem;
@@ -41,4 +43,23 @@ body{
     color: white;
     font-size: 3vmin;
 
+}
+.msg-container{
+    height: 20vh;
+    
+}
+.msg{
+    font-size: 5vmin;
+    margin-bottom: 10px;
+}
+.new-btn{
+     padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: #191913;
+    color: white;
+    font-size: 3vmin;
+}
+.hide{
+    display: none;
 }
