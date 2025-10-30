@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $sql) or die(" Query Unsucessfull");
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Address</th>
+                    <th>email</th>
                     <th>Action</th>
                 </tr>
             </thead>

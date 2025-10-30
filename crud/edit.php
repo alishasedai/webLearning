@@ -1,6 +1,30 @@
 <?php
-include "db.php"
+require_once "db.php";
+$id = $_GET['editid'];
+$sql = "SELECT * FROM student WHERE id = $id";
 
+$result1 = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result1);
+$name = $row['name'];
+$address = $row['address'];
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $sname = $_POST['sname'];
+    $saddress = $_POST['saddress'];
+
+    $sql = "UPDATE student SET  name='$sname', address='$saddress' WHERE id=$id";
+    $result = mysqli_query($conn, $sql);
+
+    // header("Location: read.php");
+    if ($result) {
+        // echo "Updated Successfully";
+        header("location:read.php");
+    } else {
+        die(mysqli_error($conn));
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,15 +37,14 @@ include "db.php"
 
 <body>
     <form action="" method="post">
-        <label for="id">Id</label>
-        <input type="text" name="sid"><br><br>
-        <label for="name">Name</label>
-        <input type="text" name="sname"><br><br>
-        <label for="address">Address</label>
-        <input type="text" name="saddress"><br><br>
-        <button value="submit" type="submit">Submit</button>
-    </form>
 
+        <label for="id">Id</label>
+        <label for="name">Name</label>
+        <input type="text" name="sname" value="<?php echo $name ?>"><br><br>
+        <label for="address">Address</label>
+        <input type="text" name="saddress" value="<?php echo $address ?>"><br><br>
+        <button value="submit" type="submit">update</button>
+    </form>
 </body>
 
 </html>
