@@ -24,6 +24,7 @@ $result = mysqli_query($conn, $sql) or die(" Query Unsucessfull");
                     <th>ID</th>
                     <th>Name</th>
                     <th>Address</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,8 +37,10 @@ $result = mysqli_query($conn, $sql) or die(" Query Unsucessfull");
                         <td><?php echo $row['id'] ?> </td>
                         <td><?php echo $row['name'] ?></td>
                         <td><?php echo $row['address'] ?></td>
-                        <td>edit</td>
-                        <td>delete</td>
+                        <td>
+                            <a href="edit.php?editid=<?php echo $row['id'] ?>">Edit</a> <br><br>
+                            <a href="delete.php?deleteid=<?php echo $row['id'] ?>">Delete</a>
+                        </td>
                     </tr>
             </tbody>
         <?php } ?>
