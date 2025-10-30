@@ -36,6 +36,8 @@ $result = mysqli_query($conn, $sql) or die(" Query Unsucessfull");
                         <td><?php echo $row['id'] ?> </td>
                         <td><?php echo $row['name'] ?></td>
                         <td><?php echo $row['address'] ?></td>
+                        <td>edit</td>
+                        <td>delete</td>
                     </tr>
             </tbody>
         <?php } ?>
