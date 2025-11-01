@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     <h3>Fill your Details</h3>
 
     <form action="" method="POST">
-        Name: <input type="text" name="name">
+        <Label>Name</Label><br><br> <input type="text" name="name">
         Address: <input type="text" name="address">
         <button type="submit" value="submit">Submit</button>
     </form>
