@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote>
+        <h2>User Record</h2>
+        <hr>
+        <table border="1" cellpadding="14">
+            <thead>
+                <th>SN</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Action</th>
+            </thead>
+            
+            <tbody id="tbody">
+               
+            </tbody>
+        </table>
+    </blockquote>
+    <script>
+
+        let users =
+     [
+      {
+        "id": 1,
+        "name": "ALisha Sedai",
+        "address": "Kathmandu",
+        "phone": "981726383"
+      },
+      {
+        "id": 2,
+        "name": "Arju Sedai",
+        "address": "Sinamangal",
+        "phone": "981726383"
+      },
+       {
+         "id": 3,
+         "name": "Sarita Sedai",
+         "address": "bktpr",
+         "phone": "981726383"
+       }
+    ]
+
+    let tbody = document.getElementById("tbody");
+    function userTable(){
+
+   
+    users.forEach(user => {
+        let tr = document.createElement("tr");
+        tr.innerHTML +=`
+       
+            <td> ${user.id}</td>
+            <td> ${user.name}</td>
+            <td> ${user.address}</td>
+            <td> ${user.phone}</td>
+            <td> <button onclick="editUser(${user.id})"> Edit</button>
+                <button onclick="deleteUser(${user.id})"> Delete</button>
+                </td>
+          
+        `;
+
+        tbody.appendChild(tr);
+
+    });
+    }
+    function deleteUser(id){
+        users = users.filter(user => user.id !== id);
+        tbody.innerHTML ="";
+        userTable();
+    }
+    function editUser(id){
+        let user = users.find(u => u.id === id);
+            let newName = prompt("Enter new name:", user.name);
+            let newPhone = prompt("Enter new phone:", user.phone);
+            let newAddress = prompt("Enter new address:", user.address);
+
+            if (newName && newPhone && newAddress) {
+                user.name = newName;
+                user.phone = newPhone;
+                user.address = newAddress;
+                tbody.innerHTML = "";
+                userTable();
+               
+            }
+    }
+
+userTable();
+
+    </script>
+</body>
+</html>

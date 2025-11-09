@@ -1,0 +1,24 @@
+{
+    "users" :
+    [
+      {
+        "id": 1,
+        "name": "ALisha Sedai",
+        "address": "Kathmandu",
+        "phone": "981726383"
+      },
+      {
+        "id": 2,
+        "name": "Arju Sedai",
+        "address": "Sinamangal",
+        "phone": "981726383"
+      },
+       {
+         "id": 3,
+         "name": "Sarita Sedai",
+         "address": "bktpr",
+         "phone": "981726383"
+       }
+
+    ]
+}

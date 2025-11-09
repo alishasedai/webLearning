@@ -1,9 +1,20 @@
-const express = require("express");
+const express = require("express");// yo express vaneko object hunxa 
 const app = express();
+app.use(express.json())
+// nodemon = auto restart
 
 app.get("/", function(req,res){
     res.send("Home page")
 
+})
+
+app.put("/:id", function(req, res){
+  const id = req.params.id;
+  res.send("Id is "+id);
+})
+app.post("/",function(req,res){
+  console.log(req.body);
+  res.send("post method send")
 })
 app.get("/about", function (req, res) {
   res.send("about page");
