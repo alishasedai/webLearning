@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #items{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+        #items diV{
+            background-color: white;
+            width: 18vw;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <blockquote>
+        <h2>products</h2>
+        <div id="items">
+
+        </div>
+    </blockquote>
+</body>
+<script>
+    let products = [
+        {id:1,name:"dell",price:20000, quantity:3},
+        {id:2,name:"asus",price:30000, quantity:6},
+        {id:3,name:"mac",price:40000, quantity:4},
+        {id:3,name:"mac",price:40000, quantity:4},
+        {id:3,name:"mac",price:40000, quantity:4},
+        {id:3,name:"mac",price:40000, quantity:4},
+    ]
+     let itemss = document.getElementById("items")
+   products.map((pro,index) => {
+    itemss.innerHTML += `
+    <div class="productItem">
+    <h3>Product Name: ${pro.name}  </h3>
+    <p> Price :${pro.price}  </p>
+    <p>Quantity: ${pro.quantity} </p>
+    <button>Add to Cart</button>
+         </div>
+    `
+   })
+</script>
+</html>

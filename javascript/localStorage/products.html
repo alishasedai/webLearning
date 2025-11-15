@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote>
+        <h3 id="userinfo"></h3>
+        <button>Logout</button>
+    </blockquote>
+</body>
+<script>
+    let user = localStorage.getItem('username');
+    if(user == null){
+        window.location.href ='index.html';
+    }
+   document.getElementById("userinfo").innerHTML ="welcome "+user;
+</script>
+</html>

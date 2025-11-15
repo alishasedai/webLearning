@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local storage</title>
+  </head>
+  <body>
+    <blockquote>
+      <h2>Login Page</h2>
+      <hr />
+      <form action="" onsubmit="login(event)">
+        Username: <input type="text" id="Username" /> <br />
+        Password: <input type="text" id="Password" /><br />
+        <button>Login</button>
+      </form>
+    </blockquote>
+  </body>
+  <script>
+    function login(e) {
+      e.preventDefault();
+      let Username = document.getElementById("Username").value;
+      let Password = document.getElementById("Password").value;
+      if (Username == "alisha" && Password == "1234") {
+        localStorage.setItem("username", Username);
+        window.location.href = "products.html";
+      } else {
+        alert("Invalid username or password");
+      }
+    }
+  </script>
+</html>
