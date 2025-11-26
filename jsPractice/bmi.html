@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            align-content: center;
+        }
+        form{
+            text-align: center;
+            padding: 30px;
+            font-size: 27px;
+            width: 60%;
+            height: 300px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+        input{
+            width: 150px;
+            height: 30px;
+            outline: none;
+            border-radius: 5px;
+        }
+        button{
+            width: 120px;
+            height: 40px;
+            color: white;
+            background-color: rgb(247, 182, 4);
+            border-radius: 6px;
+            font-size: 20px;
+            border: none;
+        }
+        #results{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" >
+
+        <label for="">weight in kg :  </label>
+        <input type="text" id="weight"> <br><br>
+         <label for="">Height in CM :  </label>
+        <input type="text" id="height"> <br><br>
+        <button id="Calculate">Calculate</button>
+        <div id="results">
+
+        </div>
+    </form>
+</body>
+<script src="bmi.js"></script>
+</html>
