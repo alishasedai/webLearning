@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        
+        h2{
+            text-align: center;
+            padding: 20px;
+        }
+        .boxes{
+          
+            
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .box{
+              width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            border: 1px solid green;
+        }
+        #red{
+            background-color: red;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #pink{
+            background-color: pink;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #purple{
+            background-color: purple;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Change the background Color according to the box <br> color by clicking on box</h2>
+   <div class="boxes">
+     <div class="box" id="red"></div>
+    <div class="box" id="blue" ></div>
+    <div class="box" id="pink"></div>
+    <div class="box" id="yellow"></div>
+    <div class="box" id="purple"></div>
+   </div>
+   <script>
+    const boxes = document.querySelectorAll(".box");
+    const body = document.querySelector("body");
+    boxes.forEach((b) => {
+ 
+    b.addEventListener('click' , (e)=> {
+        console.log(e.currentTarget.id);
+        let events = e.currentTarget.id;
+
+        if(events === "red"){
+            body.style.backgroundColor = "red";
+        }
+         if(events === "blue"){
+            body.style.backgroundColor = "blue";
+        }
+         if(events === "pink"){
+            body.style.backgroundColor = "pink";
+        }
+         if(events === "yellow"){
+            body.style.backgroundColor = "yellow";
+            body.style.color = "green"
+        }
+          if(events === "purple"){
+            body.style.backgroundColor = "purple";
+             body.style.color = "red"
+        }
+    })
+});
+   </script>
+</body>
+</html>
