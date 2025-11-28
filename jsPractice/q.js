@@ -13,6 +13,7 @@ const questions = [
         "b" : "Cascasding Style Sheet",
         "c" : "Cat Such Sleepy",
         "d" : "None of the above",
+        "correct" : "b"
     }
 ]
 let index = 0;
@@ -49,16 +50,18 @@ const submitQuiz = () => {
     loadQuestions();
 }
 const getAnswer = () => {
+    let answer;
     options.forEach(
-
+        
         (input) => {
            if(input.checked){
-            return input.value;
-           
+            answer = input.value;
            }
-         
+        
         }
+        
     )
+    return answer;
 }
 const reset = () => {
    
