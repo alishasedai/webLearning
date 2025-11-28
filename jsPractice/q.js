@@ -16,10 +16,18 @@ const questions = [
     }
 ]
 let index = 0;
+let total = questions.length;
+let right = 0, wrong = 0 ;
 let queBox = document.querySelector(".quebox");
 let options = document.querySelectorAll(".options")
 
+
 const loadQuestions = () => {
+
+    if(index === total){
+        return endQuiz();
+    }
+    reset();
     const data = questions[index];
     queBox.innerText = `${index + 1 }) ${data.que}`;
     options[0].nextElementSibling.innerText = `${data.a}`
@@ -29,18 +37,40 @@ const loadQuestions = () => {
 }
 
 const submitQuiz = () => {
+    const data = questions[index];
     const ans = getAnswer();
+    if(ans === data.correct){
+         right++;
+    }
+    else{
+        wrong++;
+    }
+    index++;
+    loadQuestions();
 }
 const getAnswer = () => {
     options.forEach(
+
         (input) => {
            if(input.checked){
-            console.log("yes");
+            return input.value;
+           
            }
-           else{
-            console.log("no")
-           }
+         
         }
     )
+}
+const reset = () => {
+   
+     options.forEach((input) => {
+       input.checked = false;
+     });
+}
+
+const endQuiz = () => {
+    const box = document.querySelector(".box");
+    box.innerHTML = `
+    Quiz End
+    your score is ${right} / ${total}`
 }
 loadQuestions()
