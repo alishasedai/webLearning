@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz practice</title>
+    <style>
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(6, 158, 252);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .box{
+            width: 40%;
+            height: 300px;
+            background-color: white;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 10px;
+
+        }
+        .row{
+            width: 100%;
+            height: 30px;
+            margin: 10px;
+            margin-left: 0;
+            font-size: 20px;
+        }
+        button{
+            width: 100%;
+            height: 40px;
+            background-color: rgb(6, 158, 252);
+            border: none;
+            border-radius:10px ;
+            color: white;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+   
+    <div class="main">
+         
+        <div class="box">
+            <p class="quebox">1) The dummy questions?</p>
+            <div class="row">
+                 <input type="radio" id="option1" class="options" value="a" name="option">
+                <label for="option1">Option a</label>
+            </div>
+             <div class="row">
+                 <input type="radio" id="option2" class="options" value="b" name="option">
+                <label for="option2">Option b</label>
+            </div>
+             <div class="row">
+                 <input type="radio" id="option3" class="options" value="c" name="option">
+                <label for="option3">Option b</label>
+            </div>
+             <div class="row">
+                 <input type="radio" id="option4" class="options" value="d" name="option">
+                <label for="option4">Option b</label>
+            </div>
+            <button class="submit" onclick="submitQuiz">
+                Submit
+            </button>
+        </div>
+    </div>
+</body>
+<script src="q.js"></script>
+</html>
