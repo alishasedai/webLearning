@@ -44,7 +44,7 @@ const generatePassword = (passwords = "") => {
     }
     userInput.value = passwords;
 
-    if(passwords.length <= totalChars.value){
+    if(passwords.length < totalChars.value){
         return generatePassword(passwords);
     }
 };
