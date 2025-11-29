@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers</title>
+</head>
+<body>
+    <h2>Findings Even  NUmbers</h2>
+    <p>here array are: </p>
+    <p></p>
+    <div class="nums">
+        <h4 class="elements">even numbers</h4>
+        <h3 class="evenNums"></h3>
+    </div>
+</body>
+<script>
+    let arrayElement = document.getElementsByTagName("p")[1];
+    let evenNums = document.querySelector(".evenNums");
+    let el = []
+
+    let array = [1,2,3,4,5,6,7,8,9,11,13,12,14,16,17,20,22,24,25,30];
+    arrayElement.innerHTML = array
+    let i, evenAns;
+   for(i=0 ; i<array.length ; i++){
+    if(array[i] % 2 == 0){
+         el.push(array[i]);  
+    }
+   }
+el.forEach(e => {
+    evenNums.innerHTML += `${e} <br> `;
+});
+
+</script>
+</html>
