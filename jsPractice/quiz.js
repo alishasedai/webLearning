@@ -25,18 +25,57 @@ const questions = [
     },
 
 ]
-let index = 2;
+let index = 0;
+let wrong = 0, right = 0, total = questions.length;
 let queData = document.querySelector(".queBox");
 let options = document.querySelectorAll(".options");
 const loadQuestions = () => {
+
+    if(index === total){
+      return endGame();
+    }
     let data = questions[index];
-    console.log(data.question)
     queData.innerHTML = `${index+1}) ${data.question}`;
     options[0].nextElementSibling.innerText = data.a;
     options[1].nextElementSibling.innerText = data.b;
     options[2].nextElementSibling.innerText = data.c;
     options[3].nextElementSibling.innerText = data.d;
-
-
 }
-loadQuestions()
+
+const submitQuiz = () => {
+    const data = questions[index];
+   const ans = getAnswer();
+   if(ans === data.correct){
+    right++;
+   }
+   else {
+    wrong++
+   }
+   index++;
+   loadQuestions();
+   reset();
+}
+const getAnswer = () => {
+    let answer ;
+    options.forEach((input) => {
+        if(input.checked){
+            answer = input.value;
+
+        }
+    })
+    return answer;
+}
+const reset = () => {
+   options.forEach((input) => {
+  input.checked = false;
+   })
+}
+const endGame = () => {
+    const box = document.querySelector(".box");
+    box.innerHTML = `Game end..
+    you score ${right} / ${total}`;
+}
+
+loadQuestions();
+
+

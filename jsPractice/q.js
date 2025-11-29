@@ -18,6 +18,7 @@ const questions = [
 ]
 let index = 0;
 let total = questions.length;
+console.log(total)
 let right = 0, wrong = 0 ;
 let queBox = document.querySelector(".quebox");
 let options = document.querySelectorAll(".options")
@@ -57,9 +58,7 @@ const getAnswer = () => {
            if(input.checked){
             answer = input.value;
            }
-        
         }
-        
     )
     return answer;
 }
