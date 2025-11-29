@@ -20,31 +20,31 @@ const getRandom = (data) => {
 generate.addEventListener("click", () => {
   generatePassword();
 });
-const generatePassword = (passwords) => {
-    let password = "";
+const generatePassword = (passwords = "") => {
+    
   if (upperLetter.checked) {
-    password += getRandom(upper);
+    passwords += getRandom(upper);
    
   }
-   userInput.value = password;
+   userInput.value = passwords;
 
     if (lowerLetter.checked) {
-      password += getRandom(lower);
+      passwords += getRandom(lower);
     }
-    userInput.value = password;
+    userInput.value = passwords;
     
     if (symbols.checked) {
-      password += getRandom(symb);
+      passwords += getRandom(symb);
     }
-    userInput.value = password;
+    userInput.value = passwords;
 
     
     if (numbers.checked) {
-      password += getRandom(nums);
+      passwords += getRandom(nums);
     }
-    userInput.value = password;
+    userInput.value = passwords;
 
-    if(password.length <= totalChars.value){
-        return generatePassword(password);
+    if(passwords.length <= totalChars.value){
+        return generatePassword(passwords);
     }
 };
