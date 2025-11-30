@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>counts how many times a specific letter appears in a string.</title>
     <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+       
     </style>
 </head>
 <body>
     <h2>counts how many times a specific letter appears in a string.</h2>
+  <div>
+      <h3 class="chars"></h3>
+    <p class="lettersContains"></p>
+  </div>
     
 </body>
 <script>
+    let ch = document.querySelector(".chars");
+    let charLetter = document.querySelector(".lettersContains");
+
     function specificLetter(character, letter){
         let lowerChar = character.toLowerCase();
         let letters = letter.toLowerCase();
@@ -28,7 +31,9 @@
             }
         }
         console.log(`${letter} contains ${count} letters `)
+        ch.innerHTML = lowerChar;
+        charLetter.innerHTML = `${letter} contains ${count} letters `;
     }
-    specificLetter("Microsoftscompanyhahahhsedaiseds","s")
+    specificLetter("Alisha Sedai Class BCA 4th Semesters","s")
 </script>
 </html>
