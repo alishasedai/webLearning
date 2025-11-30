@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels Counts</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Vowels Counts</h2>
+</body>
+<script>
+    let vowels = ['a','e','i','o','u'];
+    let  i;
+    function getVowelsCount(names) {
+        let count = 0;
+        let lowerStrings = names.toLowerCase();
+        for(i=0; i<lowerStrings.length ;i++){
+            if(vowels.includes(lowerStrings[i])){
+                count++;
+            }
+        }
+        console.log(count)
+    }
+    getVowelsCount("Apple")
+</script>
+</html>
