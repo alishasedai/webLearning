@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counts how many times a specific letter appears in a string.</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>counts how many times a specific letter appears in a string.</h2>
+    
+</body>
+<script>
+    function specificLetter(character, letter){
+        let lowerChar = character.toLowerCase();
+        let letters = letter.toLowerCase();
+        // console.log(lowerChar, letters)
+        let count = 0,i;
+        for(i=0 ; i< lowerChar.length ;i++){
+            if(lowerChar[i] === letters){
+                count ++;
+            }
+        }
+        console.log(`${letter} contains ${count} letters `)
+    }
+    specificLetter("Microsoftscompanyhahahhsedaiseds","s")
+</script>
+</html>
