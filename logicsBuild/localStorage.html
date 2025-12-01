@@ -46,18 +46,19 @@
             width: 200px;
             height: 200px;
             box-shadow: 0px 0px 10px 2px #ccc;
-            padding: 10px 20px;
+            padding: 20px 20px;
             position: relative;
         }
         .items h5{
-            margin-top: 10px;
+            margin-top: 12px;
         }
         .items span{
             position: absolute;
             top: 0;
             right: 0;
-            margin:  0 3px;
+            margin: 10px;
             font-size: 30px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -91,4 +92,35 @@
     </div>
    </div>
 </body>
+<script>
+    //  let users = [
+    //     {
+    //         'name' : 'alu',
+    //         'email' : 'alu@gmail.com'
+    //     },
+    //      {
+    //         'name' : 'alusha',
+    //         'email' : 'alusha@gmail.com'
+    //     }
+    // ]
+    // localStorage.setItem("name", JSON.stringify(users))
+
+    // console.log(JSON.parse(localStorage.getItem("name")))
+    
+ var userData = (JSON.parse(localStorage.getItem("userDetails"))) ?? [];
+ console.log(userData)
+
+    let form = document.querySelector("form");
+    form.addEventListener("submit", (event) => {
+        let name = event.target.uname.value;
+        let email = event.target.email.value;
+        let phoneNum = event.target.phoneNum.value;
+        console.log(name, email,phoneNum)
+        event.preventDefault();
+    })
+    
+
+   
+
+</script>
 </html>
