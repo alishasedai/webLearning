@@ -39,11 +39,15 @@
         }
         .users{
             margin: 30px;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 30px;
 
         }
         .items{
             flex-basis: 20%;
-            width: 200px;
+            width: 10px;
+            border-radius: 4px;
             height: 200px;
             box-shadow: 0px 0px 10px 2px #ccc;
             padding: 20px 20px;
@@ -107,32 +111,63 @@
 
     // console.log(JSON.parse(localStorage.getItem("name")))
     
-
-
     let form = document.querySelector("form");
+    let main= document.querySelector(".users");
+    
     form.addEventListener("submit", (event) => {
         event.preventDefault();
 
         let name = event.target.uname.value;
         let email = event.target.email.value;
         let phoneNum = event.target.phoneNum.value;
-      localStorage.clear();
+    
 
 
      var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
+     
  userData.push(
     {
         'name' :name,
         'email' : email,
-        'phone Number' : phoneNum
+        'phone' : phoneNum
     }
 )
 
 localStorage.setItem("userDetails", JSON.stringify(userData));
-console.log(userData)
-
+displayData();
+// console.log(userData)
      })
 
+     let displayData = () => {
+        let finalData = "";
+         var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
+         userData.forEach((element,i) => {
+            finalData += `<div class="items">
+        <span>&times;</span>
+        <h5>Name:</h5>
+        <div>${element.name}</div>
+
+        <h5>Email:</h5>
+        <div>${element.email}</div>
+
+        <h5>Phone:</h5>
+        <div>${element.phone}</div>
+    </div>`
+         });
+         main.innerHTML = finalData
+         console.log(finalData)
+     }
+     displayData()
+
+
+     let deleteUsers = () => {
+         var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
+        userData.forEach((e, i)  => {
+         if()
+        })
+     }
+
+     deleteUsers();
    
 
 </script>
