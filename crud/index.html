@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <blockquote>
+      <h1>CRUD</h1>
+      <form action="" onsubmit="addRecord(event)">
+        Name: <input type="text" id="name" required /> <br /><br />
+        Email: <input type="email" id="email" required /> <br /><br />
+        Address: <input type="text" id="address" required /> <br /><br />
+        <button>Add Record</button>
+      </form>
+      <br /><br />
+
+      <table width="100%" border="1">
+        <thead>
+          <tr>
+            <th>sn</th>
+            <th>name</th>
+            <th>email</th>
+            <th>address</th>
+            <th colspan="2">action</th>
+          </tr>
+        </thead>
+        <tbody id="students_list"></tbody>
+      </table>
+    </blockquote>
+    <script>
+      function getStudents() {
+        fetch("http://127.0.0.1:3000")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            let outPut = "";
+            data.map((student, index) => {
+              outPut += `<tr>
+                    <td>${index + 1}</td>
+                    <td>${student.name}</td>
+                    <td>${student.email}</td>
+                    <td>${student.address}</td>
+                  <td><button onclick="editStudent('${student._id}', '${
+                student.name
+              }', '${student.email}', '${student.address}')">Edit</button></td>
+            <td><button onclick="deleteStudent('${
+              student._id
+            }')">Delete</button></td>
+
+                   
+                </tr>`;
+            });
+            document.getElementById("students_list").innerHTML = outPut;
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      getStudents();
+
+      function addRecord(e) {
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let address = document.getElementById("address").value;
+        let sendData = {
+          name,
+          email,
+          address,
+        };
+        fetch("http://127.0.0.1:3000", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(sendData),
+        })
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data);
+            getStudents();
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+    </script>
+  </body>
+</html>

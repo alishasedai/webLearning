@@ -1,89 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local STorage</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .main{
-            
-            margin-top: 20px;
-        }
-        form {
-            width: 500px;
-            margin: auto;
-            padding: 10px;
-            box-shadow: 0px 0px 10px 2px #ccc;
-        }
-        form label{
-            display: block;
-            font-size: 20px;
-        }
-        form input{
-            width: 100%;
-            height: 30px;
-            margin: 10px 0;
-        }
-        button{
-            width: 100px;
-            height: 30px;
-            font-size: 16px;
-            background-color: aquamarine;
-            border: none;
-            border-radius: 3px;
-        }
-        .users{
-            margin: 30px;
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 30px;
-
-        }
-        .items{
-            flex-basis: 20%;
-            width: 10px;
-            border-radius: 4px;
-            height: 200px;
-            box-shadow: 0px 0px 10px 2px #ccc;
-            padding: 20px 20px;
-            position: relative;
-        }
-        .items h5{
-            margin-top: 12px;
-        }
-        .items span{
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 10px;
-            font-size: 30px;
-            font-weight: bold;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        margin-top: 20px;
+      }
+      form {
+        width: 500px;
+        margin: auto;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 2px #ccc;
+      }
+      form label {
+        display: block;
+        font-size: 20px;
+      }
+      form input {
+        width: 100%;
+        height: 30px;
+        margin: 10px 0;
+      }
+      button {
+        width: 100px;
+        height: 30px;
+        font-size: 16px;
+        background-color: aquamarine;
+        border: none;
+        border-radius: 3px;
+      }
+      .users {
+        margin: 30px;
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 30px;
+      }
+      .items {
+        flex-basis: 20%;
+        width: 10px;
+        border-radius: 4px;
+        height: 200px;
+        box-shadow: 0px 0px 10px 2px #ccc;
+        padding: 20px 20px;
+        position: relative;
+      }
+      .items h5 {
+        margin-top: 12px;
+      }
+      .items span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        font-size: 30px;
+        font-weight: bold;
+      }
     </style>
-</head>
-<body>
-   <div class="main">
-    <form action="">
-        <h2>Enquiry Now</h2><br>
+  </head>
+  <body>
+    <div class="main">
+      <form action="">
+        <h2>Enquiry Now</h2>
+        <br />
         <label for="">Name:</label>
-        <input type="text" name="uname">
+        <input type="text" name="uname" />
 
         <label for="">Email:</label>
-        <input type="email" name="email">
+        <input type="email" name="email" />
 
         <label for="">Phone</label>
-        <input type="text" name="phoneNum">
+        <input type="text" name="phoneNum" />
 
         <button>Submit</button>
-    </form>
-   </div>
-   <div class="users">
-    <div class="items">
+      </form>
+    </div>
+    <div class="users">
+      <div class="items">
         <span>&times;</span>
         <h5>Name:</h5>
         <div>Alisha Sedai</div>
@@ -93,10 +92,10 @@
 
         <h5>Phone:</h5>
         <div>9818085279</div>
+      </div>
     </div>
-   </div>
-</body>
-<script>
+  </body>
+  <script>
     //  let users = [
     //     {
     //         'name' : 'alu',
@@ -110,39 +109,35 @@
     // localStorage.setItem("name", JSON.stringify(users))
 
     // console.log(JSON.parse(localStorage.getItem("name")))
-    
+
     let form = document.querySelector("form");
-    let main= document.querySelector(".users");
-    
+    let main = document.querySelector(".users");
+
     form.addEventListener("submit", (event) => {
-        event.preventDefault();
+      event.preventDefault();
+  
+      let name = event.target.uname.value;
+      let email = event.target.email.value;
+      let phoneNum = event.target.phoneNum.value;
 
-        let name = event.target.uname.value;
-        let email = event.target.email.value;
-        let phoneNum = event.target.phoneNum.value;
-    
+      var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
 
+      userData.push({
+        name: name,
+        email: email,
+        phone: phoneNum,
+      });
 
-     var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
-     
- userData.push(
-    {
-        'name' :name,
-        'email' : email,
-        'phone' : phoneNum
-    }
-)
+      localStorage.setItem("userDetails", JSON.stringify(userData));
+      displayData();
+      // console.log(userData)
+    });
 
-localStorage.setItem("userDetails", JSON.stringify(userData));
-displayData();
-// console.log(userData)
-     })
-
-     let displayData = () => {
-        let finalData = "";
-         var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
-         userData.forEach((element,i) => {
-            finalData += `<div class="items">
+    let displayData = () => {
+      let finalData = "";
+      var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
+      userData.forEach((element, i) => {
+        finalData += `<div class="items">
         <span>&times;</span>
         <h5>Name:</h5>
         <div>${element.name}</div>
@@ -152,23 +147,20 @@ displayData();
 
         <h5>Phone:</h5>
         <div>${element.phone}</div>
-    </div>`
-         });
-         main.innerHTML = finalData
-         console.log(finalData)
-     }
-     displayData()
+    </div>`;
+        event.target.reset();
 
+      });
+      main.innerHTML = finalData;
+      console.log(finalData);
+    };
+    displayData();
 
-     let deleteUsers = () => {
-         var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
-        userData.forEach((e, i)  => {
-         if()
-        })
-     }
+    let deleteUsers = () => {
+      var userData = JSON.parse(localStorage.getItem("userDetails")) ?? [];
+      userData.forEach((e, i) => {});
+    };
 
-     deleteUsers();
-   
-
-</script>
+    deleteUsers();
+  </script>
 </html>
