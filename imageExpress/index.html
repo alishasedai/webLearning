@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <blockquote>
+        <h1>Image Upload </h1>
+        <form action="" onsubmit="uploadFile(event)">
+           File Name <input type="file" id="image"> <br><br>
+            <button>Upload File</button>
+        </form>
+        <hr>
+        <div id="result"></div>
+    </blockquote>
+    <script>
+        function getUser(){
+            fetch("http://127.0.0.1:8000").then((res)=>{
+                return res.json();
+            }).then((user)=>{
+               let outPut="";
+               user.forEach((u)=>{
+                outPut+=`<img src="${u.image}" width="200">`
+               })
+               document.getElementById('result').innerHTML=outPut;
+            }).catch((e)=>{
+                console.log(e);
+            })
+
+        }
+        getUser();
+        function uploadFile(e){
+            e.preventDefault();
+            const fileInput = document.getElementById('image');
+            const file = fileInput.files[0];
+            let sendData = new FormData();
+            sendData.append('image', file);
+            fetch('http://localhost:8000', {
+                method: 'POST',
+                body: sendData
+            }).then((res)=>{
+                return res.json();
+            }).then((data)=>{
+                console.log(data);
+            }).catch((e)=>{
+                console.log(e);
+            })
+
+            
+        }
+    </script>
+</body>
+</html>
