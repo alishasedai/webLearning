@@ -80,4 +80,24 @@ router.get("/:id", (req, res) => {
     res.status(200).json(post);
   }
 });
+
+router.put("/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const post = posts.find((post) => post.id === id);
+
+  if (!post) {
+    return res
+      .status(404)
+      .json({ msg: `A post with the id ${id} was not found ` });
+  }
+    if (!req.body || !req.body.title) {
+      return res
+        .status(400)
+        .json({ msg: "Please include a title in the request body" });
+    }
+  post.title = req.body.title;
+  res.status(200).json(posts);
+});
+
+
 module.exports = router;

@@ -7,6 +7,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended : false}))
 app.use("/post/api", exportRoutes)
 app.listen(5000, () => {
-    console.log("server starting in port 6000")
+    console.log("server starting in port 5000")
 })
 
