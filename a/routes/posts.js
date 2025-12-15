@@ -84,6 +84,7 @@ router.get("/:id", (req, res) => {
 router.put("/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const post = posts.find((post) => post.id === id);
+  console.log(post)
 
   if (!post) {
     return res
@@ -96,6 +97,7 @@ router.put("/:id", (req, res) => {
         .json({ msg: "Please include a title in the request body" });
     }
   post.title = req.body.title;
+  console.log(posts)
   res.status(200).json(posts);
 });
 
